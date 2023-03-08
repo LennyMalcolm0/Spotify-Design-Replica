@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(255, 204, 0);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-bar-container {
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  z-index: 999;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 0 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-bar img {
+  height: 35px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links {
+  display: flex;
+  color: #171313;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nl-link {
+  margin-left: 15px;
+  position: relative;
+}
+
+.nl-link-title {
+  cursor: pointer;
+}
+.nl-link-title:hover {
+  opacity: 0.6;
+}
+
+.nl-dot {
+  height: 5px;
+  width: 5px;
+  background-color: #171313;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 35px;
 }
