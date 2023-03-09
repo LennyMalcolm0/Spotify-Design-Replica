@@ -6,12 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(255, 204, 0);
+  overflow-x: hidden;
 }
 
 .nav-bar-container {
   width: 100%;
   position: absolute;
-  top: 30px;
+  top: 0px;
   z-index: 999;
 }
 
@@ -20,13 +21,15 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 60px;
+  margin-top: 30px;
 }
 
 .nav-bar img {
   height: 35px;
+  cursor: pointer;
 }
 
-.nav-links {
+.desktop-nav-menu {
   display: flex;
   color: #171313;
   font-size: 18px;
@@ -41,6 +44,7 @@ body {
 .nl-link-title {
   cursor: pointer;
 }
+
 .nl-link-title:hover {
   opacity: 0.6;
 }
@@ -54,4 +58,121 @@ body {
   position: absolute;
   left: 50%;
   top: 35px;
+}
+
+.nav-icon {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav-icon .fa-xmark {
+  display: none;
+}
+
+.mobile-nav-menu {
+  display: none;
+}
+
+/* Responsive effect for Nav Bar */
+@media screen and (max-width: 600px) {
+  .desktop-nav-menu {
+    display: none;
+  }
+
+  .mobile-nav-menu {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+
+  .nav-icon .fa-xmark {
+    display: none;
+  }
+
+  .nav-bar {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+
+  .mobile-nav-menu .links {
+    margin-top: 140px;
+  }
+
+  .nl-link {
+    display: flex;
+  }
+
+  .nl-dot {
+    display: none;
+    height: 15px;
+    width: 15px;
+    opacity: 1;
+    position: static;
+  }
+
+  .nl-link-title {
+    font-size: 55px;
+    font-weight: 700;
+  }
+
+  .socials {
+    font-size: 24px;
+  }
+
+  .place-time {
+    display: flex;
+    font-size: 17px;
+  }
+
+  .place {
+    font-weight: 600;
+    margin-right: 15px;
+  }
+}
+
+.flex-wrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  z-index: 999;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.mobile-menu-background {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes menuBackgroundIntro {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes menuBackgroundOutro {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
