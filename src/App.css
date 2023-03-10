@@ -41,12 +41,12 @@ body {
   position: relative;
 }
 
-.nl-link-title {
-  cursor: pointer;
+.nl-link:hover {
+  opacity: 0.6;
 }
 
-.nl-link-title:hover {
-  opacity: 0.6;
+.nl-link-title {
+  cursor: pointer;
 }
 
 .nl-dot {
@@ -54,16 +54,19 @@ body {
   width: 5px;
   background-color: #171313;
   border-radius: 50%;
-  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s linear;
   position: absolute;
   left: 50%;
   top: 35px;
 }
 
+.nl-link-active .nl-dot {
+  transform: scale(1);
+}
+
 .nav-icon {
   display: none;
-  font-size: 20px;
-  cursor: pointer;
 }
 
 .nav-icon .fa-xmark {
@@ -74,10 +77,51 @@ body {
   display: none;
 }
 
+.mobile-menu-background {
+  display: none;
+}
+
 /* Responsive effect for Nav Bar */
+@media screen and (max-width: 1000px) {
+  .nav-bar {
+    padding: 0 30px;
+  }
+
+  .desktop-nav-menu {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .desktop-nav-menu {
     display: none;
+  }
+
+  .mobile-menu-background {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  @keyframes menuBackgroundIntro {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes menuBackgroundOutro {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(100%);
+      display: none;
+    }
   }
 
   .mobile-nav-menu {
@@ -86,9 +130,31 @@ body {
     width: 100%;
     position: absolute;
   }
+  @keyframes mobileMenuIntro {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes mobileMenuOutro {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
 
   .nav-icon {
     display: block;
+    font-size: 20px;
+  }
+
+  .nav-icon .fa-bars {
+    cursor: pointer;
   }
 
   .nav-icon .fa-xmark {
@@ -100,25 +166,46 @@ body {
     margin-top: 20px;
   }
 
+  .nav-bar img {
+    cursor: default;
+  }
+
   .mobile-nav-menu .links {
     margin-top: 140px;
   }
 
   .nl-link {
     display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 
-  .nl-dot {
+  .mobile-nav-menu .nl-dot {
     display: none;
-    height: 15px;
-    width: 15px;
-    opacity: 1;
+    height: 12px;
+    width: 12px;
+    margin-right: 10px;
+    transform: scale(1);
     position: static;
   }
 
   .nl-link-title {
     font-size: 55px;
     font-weight: 700;
+  }
+
+  .flex-wrapper {
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    z-index: 999;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
   }
 
   .socials {
@@ -133,46 +220,5 @@ body {
   .place {
     font-weight: 600;
     margin-right: 15px;
-  }
-}
-
-.flex-wrapper {
-  width: 100%;
-  position: absolute;
-  bottom: 40px;
-  z-index: 999;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 15px;
-}
-
-.mobile-menu-background {
-  display: none;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-@keyframes menuBackgroundIntro {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-@keyframes menuBackgroundOutro {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(100%);
   }
 }
