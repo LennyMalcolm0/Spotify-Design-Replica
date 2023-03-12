@@ -1,0 +1,93 @@
+.Home {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: rgb(255, 204, 0);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.random-stories{
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.controls div:nth-child(2) {
+    margin: 20px 0;
+}
+
+.story-text {
+    height: 500px;
+    width: 500px;
+}
+
+.story-text .theme {
+    position: relative;
+    top: 10px;
+}
+
+.story-text .info {
+    font-size: 64px;
+}
+
+.story-text div:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.story-image img {
+    height: 500px;
+    width: auto;
+    box-shadow: 5px 5px 25px grey;
+    cursor: grab;
+}
+
+.timer-scroll {
+    padding: 0 60px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.count-down {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 100px;
+}
+
+.progress-bar {
+    margin: 0 10px;
+    position: relative;
+}
+
+.empty {
+    height: 2px;
+    width: 45px;
+    background-color: #9c9797;
+    opacity: .4;
+}
+
+.scroll-down {
+    display: flex;
+    align-items: center;
+}
+
+.scroll-down div {
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+    border: 1px solid #bdafb1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-down div:hover {
+    background-color: black;
+    cursor: pointer;
+}
+

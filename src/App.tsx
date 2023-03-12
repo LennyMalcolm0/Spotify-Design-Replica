@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link, Routes, Route, BrowserRouter } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-// import HomePage from './Home/Home';
-// import FetchData from './General-Components/Fetch-data';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import HomePage from './Home/Home';
+import StoriesPage from './Stories/Stories';
+import ListenPage from './Listen/Listen';
+import TeamsPage from './Team/Team';
+import ToolsPage from './Tools/Tools';
 
 function App() {
   // const observer = new IntersectionObserver(entries => {
@@ -19,8 +23,8 @@ function App() {
   // hiddenEls.forEach(el => observer.observe(el));
   
   useEffect(() => {
-    const desktopLinkTitle = document.querySelectorAll(".desktop-nav-menu .nl-link-title"),
-    mobileLinkTitle = document.querySelectorAll(".mobile-nav-menu .nl-link-title"),
+    const desktopLinkTitle = document.querySelectorAll(".desktop-nav-menu a"),
+    mobileLinkTitle = document.querySelectorAll(".mobile-nav-menu a"),
     desktopLinks = document.querySelectorAll(".desktop-nav-menu .nl-link"),
     mobileLinks = document.querySelectorAll(".mobile-nav-menu .nl-link");
 
@@ -122,10 +126,12 @@ function App() {
     
     window.addEventListener("resize", () => {
       if (min600.matches) {
-        mobileMenu.style.display = "none";
-        openMenuButton.style.display = "none";
-        closeMenuButton.style.display = "none";
-        menuBackground.style.display = "none";
+        if (mobileMenu.style.display === "block") {
+          openMenuButton.style.display = "none";
+          closeMenuButton.style.display = "none";
+          mobileMenu.style.display = "none";
+          menuBackground.style.display = "none";
+        }
       } else {
         if (closeMenuButton.style.display === "none") {
           openMenuButton.style.display = "block";
@@ -136,83 +142,92 @@ function App() {
   
   return (
     <div className="App">
-      <div className="nav-bar-container">
-        <div className="nav-bar">
-          <img src="GenImages\Spotify Logo.svg" alt="" />
+      <BrowserRouter>
+        <div className="nav-bar-container">
+          <div className="nav-bar">
+              <Link to="/"><img src="Images/Spotify Logo.svg" alt="" /></Link>
 
-          <div className="desktop-nav-menu">
-            <div className="nl-link">
-              <div className="nl-link-title">Stories</div>
-              <div className="nl-dot"></div>
-            </div>
-
-            <div className="nl-link">
-              <div className="nl-link-title">Listen</div>
-              <div className="nl-dot"></div>
-            </div>
-
-            <div className="nl-link">
-              <div className="nl-link-title">Team</div>
-              <div className="nl-dot"></div>
-            </div>
-
-            <div className="nl-link">
-              <div className="nl-link-title">Tools</div>
-              <div className="nl-dot"></div>
-            </div>
-          </div>
-
-          <div className="nav-icon">
-            <i className="fa-solid fa-bars"></i>
-            <i className="fa-solid fa-xmark"></i>
-          </div>
-        </div>
-      </div>
-
-      <div className="mobile-menu-background"></div>
-      <div className="mobile-nav-menu">
-        <div className="links">
-            <div className="nl-link">
-              <div className="nl-dot"></div>
-              <div className="nl-link-title">Stories</div>
-            </div>
-
-            <div className="nl-link">
-              <div className="nl-dot"></div>
-              <div className="nl-link-title">Listen</div>
-            </div>
-
-            <div className="nl-link">
-              <div className="nl-dot"></div>
-              <div className="nl-link-title">Team</div>
-            </div>
-
-            <div className="nl-link">
-              <div className="nl-dot"></div>
-              <div className="nl-link-title">Tools</div>
-            </div>
-        </div>
-        <div className="flex-wrapper">
-          <div className="flex">
-            <div className="socials">
-              <div>Instagram</div>
-              <div>Twitter</div>
-            </div>
-            <div className="place-time">
-              <div className="place">
-                <div>SE</div>
-                <div>UK</div>
-                <div>US</div>
+            <div className="desktop-nav-menu">
+              <div className="nl-link">
+                <Link to="/stories"><div className="nl-link-title">Stories</div></Link>
+                <div className="nl-dot"></div>
               </div>
-              <div className="time">
-                <div>06:09:28</div>
-                <div>05:09:28</div>
-                <div>12:09:28</div>
+
+              <div className="nl-link">
+                <Link to="/listen"><div className="nl-link-title">Listen</div></Link>
+                <div className="nl-dot"></div>
+              </div>
+
+              <div className="nl-link">
+                <Link to="/team"><div className="nl-link-title">Team</div></Link>
+                <div className="nl-dot"></div>
+              </div>
+
+              <div className="nl-link">
+                <Link to="/tools"><div className="nl-link-title">Tools</div></Link>
+                <div className="nl-dot"></div>
               </div>
             </div>
+
+            <div className="nav-icon">
+              <i className="fa-solid fa-bars"></i>
+              <i className="fa-solid fa-xmark"></i>
+            </div>
           </div>
         </div>
-      </div>
+
+        <div className="mobile-menu-background"></div>
+        <div className="mobile-nav-menu">
+          <div className="links">
+              <div className="nl-link">
+                <div className="nl-dot"></div>
+                <Link to="/stories"><div className="nl-link-title">Stories</div></Link>
+              </div>
+
+              <div className="nl-link">
+                <div className="nl-dot"></div>
+                <Link to="/listen"><div className="nl-link-title">Listen</div></Link>
+              </div>
+
+              <div className="nl-link">
+                <div className="nl-dot"></div>
+                <Link to="/team"><div className="nl-link-title">Team</div></Link>
+              </div>
+
+              <div className="nl-link">
+                <div className="nl-dot"></div>
+                <Link to="/tools"><div className="nl-link-title">Tools</div></Link>
+              </div>
+          </div>
+          <div className="flex-wrapper">
+            <div className="flex">
+              <div className="socials">
+                <div>Instagram</div>
+                <div>Twitter</div>
+              </div>
+              <div className="place-time">
+                <div className="place">
+                  <div>SE</div>
+                  <div>UK</div>
+                  <div>US</div>
+                </div>
+                <div className="time">
+                  <div>06:09:28</div>
+                  <div>05:09:28</div>
+                  <div>12:09:28</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Routes>
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/stories" element={<StoriesPage/>} />
+          <Route path="/listen" element={<ListenPage/>} />
+          <Route path="/team" element={<TeamsPage/>} />
+          <Route path="/tools" element={<ToolsPage/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
