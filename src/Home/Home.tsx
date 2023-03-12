@@ -8,18 +8,29 @@ const HomePage = () => {
     return ( 
         <div className="Home">
             <div className="random-stories">
-                <div className="controls">
-                    <div><img src="icons\forward.svg" alt="" /></div>
-                    <div><img src="icons\backward.svg" alt="" /></div>
-                    <div><img src="icons\shuffle.svg" alt="" /></div>
+                <div className="story-images">
+                    <div className="tablet-controls controls">
+                        <div><img src="icons\forward.svg" alt="" /></div>
+                        <div><img src="icons\backward.svg" alt="" /></div>
+                        <div><img src="icons\shuffle.svg" alt="" /></div>
+                    </div>
+                    <div className="animated-image"><img src="Images\Collaboration Secrets(story).svg" alt="" /></div>
                 </div>
                 <div className="story-text">
                     <div className="theme">BEHIND THE SCENES</div>
                     <div className="info">Making Moves: Designing Motion for 2022 Wrapped</div>
                 </div>
-                <div className="story-image">
-                    <img src="Images\Collaboration Secrets(story).svg" alt="" />
+                <div className="desktop-controls controls">
+                    <div><img src="icons\forward.svg" alt="" /></div>
+                    <div><img src="icons\backward.svg" alt="" /></div>
+                    <div><img src="icons\shuffle.svg" alt="" /></div>
                 </div>
+            </div>
+
+            <div className="mobile-controls">
+                <div><img src="icons\forward.svg" alt="" /></div>
+                <div><img src="icons\backward.svg" alt="" /></div>
+                <div><img src="icons\shuffle.svg" alt="" /></div>
             </div>
             <div className="timer-scroll">
                 <div className="count-down">
