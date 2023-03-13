@@ -18,15 +18,15 @@
     margin: 20px 0;
 }
 
-.tablet-controls {
+.controls-position1 {
     display: none;
 }
 
-.mobile-controls div:nth-child(2) {
+.controls-position3 div:nth-child(2) {
     margin: 0 10px;
 }
 
-.mobile-controls {
+.controls-position3 {
     display: none;
     margin-left: -5px;
 }
@@ -37,8 +37,7 @@
 }
 
 .story-text .theme {
-    position: relative;
-    top: 10px;
+    margin-top: 10px;
 }
 
 .story-text .info {
@@ -73,8 +72,7 @@
 .count-down {
     display: flex;
     align-items: center;
-    position: relative;
-    left: 100px;
+    margin-left: 100px;
 }
 
 .progress-bar {
@@ -110,12 +108,24 @@
     cursor: pointer;
 }
 
+@media screen and (min-width: 1500px) {
+    .Home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .random-stories, .timer-scroll {
+        width:  1400px;
+    }
+}
+
 @media screen and (max-width: 1300px) {
-    .desktop-controls {
+    .controls-position2 {
         display: none;
     }
 
-    .mobile-controls {
+    .controls-position3 {
         display: flex;
         padding: 0 60px;
         margin-top: 60px;
@@ -133,26 +143,18 @@
         font-size: 55px;
     }
 
-    .count-down {
-        left: 0;
-    }
-
-    .timer-scroll {
+    .count-down, .timer-scroll {
         margin: 0;
     }
 }
 
 @media screen and (max-width: 1100px) {
-    .random-stories {
+    .random-stories, .controls-position1 {
         display: block;
     }
 
-    .mobile-controls {
+    .controls-position3 {
         display: none;
-    }
-
-    .tablet-controls {
-        display: block;
     }
     
     .animated-image {
@@ -173,30 +175,47 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .random-stories {
-        padding: 0 30px;
-    }
-    
-    .timer-scroll {
+    .random-stories, .timer-scroll {
         padding: 0 30px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .tablet-controls {
+    .controls-position1 {
         display: none;
     }
 
     .story-text .info {
         font-size: 42px;
     }
+
+    .animated-image img {
+        width: 90%;
+    }
     
-    .mobile-controls {
+    .controls-position3 {
         display: flex;
         padding: 0 30px;
+        margin-top: 80px;
     }
     
     .timer-scroll {
         margin-top: 0;
+    }
+
+    .scroll-down div {
+        height: 45px;
+        width: 45px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .random-stories, .animated-image, .controls-position3, .timer-scroll {
+        padding: 0 15px;
+    }
+
+    .scroll-down div {
+        height: 35px;
+        width: 35px;
     }
 }

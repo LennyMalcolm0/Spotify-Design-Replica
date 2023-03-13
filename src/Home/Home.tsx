@@ -9,7 +9,7 @@ const HomePage = () => {
         <div className="Home">
             <div className="random-stories">
                 <div className="story-images">
-                    <div className="tablet-controls controls">
+                    <div className="controls-position1 controls">
                         <div><img src="icons\forward.svg" alt="" /></div>
                         <div><img src="icons\backward.svg" alt="" /></div>
                         <div><img src="icons\shuffle.svg" alt="" /></div>
@@ -20,16 +20,16 @@ const HomePage = () => {
                     <div className="theme">BEHIND THE SCENES</div>
                     <div className="info">Making Moves: Designing Motion for 2022 Wrapped</div>
                 </div>
-                <div className="desktop-controls controls">
+                <div className="controls-position2 controls">
                     <div><img src="icons\forward.svg" alt="" /></div>
                     <div><img src="icons\backward.svg" alt="" /></div>
                     <div><img src="icons\shuffle.svg" alt="" /></div>
                 </div>
             </div>
 
-            <div className="mobile-controls">
-                <div><img src="icons\forward.svg" alt="" /></div>
+            <div className="controls-position3">
                 <div><img src="icons\backward.svg" alt="" /></div>
+                <div><img src="icons\forward.svg" alt="" /></div>
                 <div><img src="icons\shuffle.svg" alt="" /></div>
             </div>
             <div className="timer-scroll">

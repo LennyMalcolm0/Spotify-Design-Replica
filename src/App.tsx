@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, Routes, Route, BrowserRouter } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useEffect, useState } from 'react';
+import './App.css';
+import './Reusable.css';
 import HomePage from './Home/Home';
 import StoriesPage from './Stories/Stories';
 import ListenPage from './Listen/Listen';
@@ -62,13 +64,16 @@ function App() {
   
     const openMenuButton = document.querySelector(".nav-icon .fa-bars") as HTMLElement,
     closeMenuButton = document.querySelector(".nav-icon .fa-xmark") as HTMLElement,
+    appBody = document.querySelector("body") as HTMLElement,
     mobileMenu = document.querySelector(".mobile-nav-menu") as HTMLElement,
     menuBackground = document.querySelector(".mobile-menu-background") as HTMLElement;
   
     openMenuButton.addEventListener("click", () => {
       openMenuButton.style.display = "none";
       closeMenuButton.style.display = "block";
+      appBody.style.overflowY = "hidden";
       mobileMenu.style.display = "block";
+      mobileMenu.classList.remove("closed");
       mobileMenu.style.animation = "mobileMenuIntro 0.5s linear 0s 1 normal forwards";
       menuBackground.style.display = "block";
       menuBackground.style.animation = "menuBackgroundIntro 0.5s linear 0s 1 normal forwards";
@@ -87,6 +92,8 @@ function App() {
         // Closing Menu
         closeMenuButton.style.display = "none";
         openMenuButton.style.display = "block";
+        appBody.style.overflowY = "scroll";
+        mobileMenu.classList.add("closed");
         mobileMenu.style.animation = "mobileMenuOutro 0.4s linear 0s 1 normal forwards";
         menuBackground.style.animation = "menuBackgroundOutro 0.5s linear 0s 1 normal forwards";
 
@@ -111,7 +118,7 @@ function App() {
     const min600 = window.matchMedia("(min-width: 600px)"),
     spotifyNavLogo = document.querySelector(".nav-bar img") as HTMLElement;
     spotifyNavLogo.addEventListener("click", () => {
-      if (min600.matches) {
+      if (mobileMenu.classList.contains("closed")) {
         desktopLinks.forEach(titles => {
           titles.classList.remove("nl-link-active");
           const desktopNavDots = titles.children[1] as HTMLElement;
@@ -129,7 +136,9 @@ function App() {
         if (mobileMenu.style.display === "block") {
           openMenuButton.style.display = "none";
           closeMenuButton.style.display = "none";
+          appBody.style.overflowY = "scroll";
           mobileMenu.style.display = "none";
+          mobileMenu.classList.add("closed");
           menuBackground.style.display = "none";
         }
       } else {
@@ -177,7 +186,7 @@ function App() {
         </div>
 
         <div className="mobile-menu-background"></div>
-        <div className="mobile-nav-menu">
+        <div className="mobile-nav-menu closed">
           <div className="links">
               <div className="nl-link">
                 <div className="nl-dot"></div>
@@ -199,8 +208,8 @@ function App() {
                 <Link to="/tools"><div className="nl-link-title">Tools</div></Link>
               </div>
           </div>
-          <div className="flex-wrapper">
-            <div className="flex">
+          <div className="menu-extra-container">
+            <div className="menu-extra">
               <div className="socials">
                 <div>Instagram</div>
                 <div>Twitter</div>
