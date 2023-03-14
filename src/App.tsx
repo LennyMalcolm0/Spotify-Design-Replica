@@ -150,7 +150,7 @@ function App() {
   }, []);
   
   return (
-    <div className="App">
+    <div className="App font-bold">
       <BrowserRouter>
         <div className="nav-bar-container">
           <div className="nav-bar">
