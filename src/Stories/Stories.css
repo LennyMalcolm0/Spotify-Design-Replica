@@ -1,0 +1,14 @@
+.top-bg-shape {
+    animation: topBgShape 1s ease 0s 1 normal forwards;
+}
+
+@keyframes topBgShape {
+    from {
+        transform: translateX(-100%);
+        top: 2vh;
+    }
+    to {
+        transform: translateX(0%);
+        top: -5vh;
+    }
+}

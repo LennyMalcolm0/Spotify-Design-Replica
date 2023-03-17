@@ -28,7 +28,8 @@ function App() {
     const desktopLinkTitle = document.querySelectorAll(".desktop-nav-menu a"),
     mobileLinkTitle = document.querySelectorAll(".mobile-nav-menu a"),
     desktopLinks = document.querySelectorAll(".desktop-nav-menu .nl-link"),
-    mobileLinks = document.querySelectorAll(".mobile-nav-menu .nl-link");
+    mobileLinks = document.querySelectorAll(".mobile-nav-menu .nl-link"),
+    appBody = document.querySelector("body") as HTMLElement;
 
     desktopLinkTitle.forEach(linkTitle => {
       const navLink = linkTitle.parentElement as HTMLElement,
@@ -46,12 +47,17 @@ function App() {
         desktopLinks.forEach(titles => {
           titles.classList.remove("nl-link-active");
           const desktopNavDots = titles.children[1] as HTMLElement;
-          desktopNavDots.style.transform = "scale(0)"
+          desktopNavDots.style.transform = "scale(0)";
+
+          // Returning scroll property after navigating to a new page in cases where a full screen popup was active
+          if (!titles.classList.contains("nl-link-active")) {
+            appBody.style.overflowY = "scroll";
+          }
         });
         navLink.classList.add("nl-link-active");
         desktopNavDot.style.transform = "scale(1)";
 
-        // Reflecting changes in Mobile Menu
+        // Reflecting changes in Mobile Nav Menu
         mobileLinkTitle.forEach(mobileTitle => {
           const mobileNavDot = mobileTitle.previousElementSibling as HTMLElement;
           mobileNavDot.style.display = "none";
@@ -64,7 +70,6 @@ function App() {
   
     const openMenuButton = document.querySelector(".nav-icon .fa-bars") as HTMLElement,
     closeMenuButton = document.querySelector(".nav-icon .fa-xmark") as HTMLElement,
-    appBody = document.querySelector("body") as HTMLElement,
     mobileMenu = document.querySelector(".mobile-nav-menu") as HTMLElement,
     menuBackground = document.querySelector(".mobile-menu-background") as HTMLElement;
   
@@ -116,8 +121,11 @@ function App() {
     });
 
     const min600 = window.matchMedia("(min-width: 600px)"),
-    spotifyNavLogo = document.querySelector(".nav-bar img") as HTMLElement;
+    spotifyNavLogo = document.querySelector(".nav-bar img") as HTMLImageElement;
     spotifyNavLogo.addEventListener("click", () => {
+      // Returning scroll property after navigating to the Home page in cases where a full screen popup was active
+      appBody.style.overflowY = "scroll";
+
       if (mobileMenu.classList.contains("closed")) {
         desktopLinks.forEach(titles => {
           titles.classList.remove("nl-link-active");
@@ -129,6 +137,39 @@ function App() {
           mobileNavDot.style.display = "none";
         })
       };
+    });
+
+    // Adjusting color of Nav Menu items to match background color change
+    const allLinks = document.querySelectorAll("a"),
+    allNavDots = document.querySelectorAll(".nl-dot");
+    allLinks.forEach(navLink => {
+      navLink.addEventListener("click", () => {
+        appBody.scrollIntoView();
+
+        if (navLink.textContent === "Team" || navLink.textContent === "Listen") {
+          spotifyNavLogo.src = "Images/Spotify Logo White.svg";
+
+          allLinks.forEach(navLink => {
+            navLink.classList.remove("text-black");
+            navLink.classList.add("text-white");
+          });
+          allNavDots.forEach(navDot => {
+            navDot.classList.remove("bg-black");
+            navDot.classList.add("bg-white");
+          });
+        } else {
+          spotifyNavLogo.src = "Images/Spotify Logo Black.svg";
+
+          allLinks.forEach(navLink => {
+            navLink.classList.remove("text-white");
+            navLink.classList.add("text-black");
+          });
+          allNavDots.forEach(navDot => {
+            navDot.classList.remove("bg-white");
+            navDot.classList.add("bg-black");
+          });
+        }
+      })
     });
     
     window.addEventListener("resize", () => {
@@ -150,31 +191,31 @@ function App() {
   }, []);
   
   return (
-    <div className="App font-bold">
+    <div className="App font-bold tracking-tight">
       <BrowserRouter>
         <div className="nav-bar-container">
           <div className="nav-bar">
-              <Link to="/"><img src="Images/Spotify Logo.svg" alt="" /></Link>
+              <Link to="/"><img src="Images/Spotify Logo Black.svg" alt="" /></Link>
 
             <div className="desktop-nav-menu">
               <div className="nl-link">
                 <Link to="/stories"><div className="nl-link-title">Stories</div></Link>
-                <div className="nl-dot"></div>
+                <div className="nl-dot bg-black"></div>
               </div>
 
               <div className="nl-link">
                 <Link to="/listen"><div className="nl-link-title">Listen</div></Link>
-                <div className="nl-dot"></div>
+                <div className="nl-dot bg-black"></div>
               </div>
 
               <div className="nl-link">
                 <Link to="/team"><div className="nl-link-title">Team</div></Link>
-                <div className="nl-dot"></div>
+                <div className="nl-dot bg-black"></div>
               </div>
 
               <div className="nl-link">
                 <Link to="/tools"><div className="nl-link-title">Tools</div></Link>
-                <div className="nl-dot"></div>
+                <div className="nl-dot bg-black"></div>
               </div>
             </div>
 
@@ -189,22 +230,22 @@ function App() {
         <div className="mobile-nav-menu closed">
           <div className="links">
               <div className="nl-link">
-                <div className="nl-dot"></div>
+                <div className="nl-dot bg-black"></div>
                 <Link to="/stories"><div className="nl-link-title">Stories</div></Link>
               </div>
 
               <div className="nl-link">
-                <div className="nl-dot"></div>
+                <div className="nl-dot bg-black"></div>
                 <Link to="/listen"><div className="nl-link-title">Listen</div></Link>
               </div>
 
               <div className="nl-link">
-                <div className="nl-dot"></div>
+                <div className="nl-dot bg-black"></div>
                 <Link to="/team"><div className="nl-link-title">Team</div></Link>
               </div>
 
               <div className="nl-link">
-                <div className="nl-dot"></div>
+                <div className="nl-dot bg-black"></div>
                 <Link to="/tools"><div className="nl-link-title">Tools</div></Link>
               </div>
           </div>
