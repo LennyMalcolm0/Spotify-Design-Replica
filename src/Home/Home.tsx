@@ -1,6 +1,8 @@
 import './Home.css';
 import { Link } from 'react-router-dom';
-import { stories } from '../StoriesData/Data';
+import { stories } from '../AppData/Data';
+import NavBar from '../Components/NavBar';
+import ViewMore from '../Components/ViewMore';
 
 const HomePage = () => {
     const homeStories = [];
@@ -10,6 +12,8 @@ const HomePage = () => {
 
     return ( 
         <div className="Home">
+            <NavBar logoUrl="Images\Spotify Logo Black.svg" color="black" activeLink="Home" />
+
             <div className="Home-container">
                 <div className="random-stories">
                     <div className="story-images">
@@ -55,12 +59,7 @@ const HomePage = () => {
             <div className="w-full max-w-[1400px] mt-[50px] sm:mt-[30px] mb-[30px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] flex items-center justify-between">
                 <div className="text-[32px] sm:text-[24px]">New Releases</div>
                 <Link to="/stories">
-                    <div className="sm:hidden flex items-center group text-[14px] cursor-pointer">
-                        <div className="mb-[5px] uppercase group-hover:underline decoration-double">View all stories</div>
-                        <div className="w-6 h-6 ml-[5px] rounded-full border-[1px] border-black border-solid transition-all duration-200 group-hover:bg-black flex items-center justify-center">
-                            <i className="fa-solid fa-arrow-right group-hover:text-white"></i>
-                        </div>
-                    </div>
+                    <ViewMore text="View all stories" textColor1="black" textColor2="white" arrowDirection="right" />
                 </Link>
             </div>
 
@@ -102,12 +101,7 @@ const HomePage = () => {
                     <div className="font-normal">Meet the humans who design Spotify</div>
                 </div>
                 <Link to="/stories">
-                    <div className="sm:hidden flex items-center group text-[14px] cursor-pointer">
-                        <div className="mb-[5px] uppercase group-hover:underline decoration-double">View all in the spotlight</div>
-                        <div className="w-6 h-6 ml-[5px] rounded-full border-[1px] border-black border-solid transition-all duration-200 group-hover:bg-black flex items-center justify-center">
-                            <i className="fa-solid fa-arrow-right group-hover:text-white"></i>
-                        </div>
-                    </div>
+                    <ViewMore text="View all in the spotlights" textColor1="black" textColor2="white" arrowDirection="right" />
                 </Link>
             </div>
         </div>

@@ -2,6 +2,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,33 +21,6 @@ body {
 a {
   text-decoration: none;
   color: black;
-}
-
-.nav-bar-container {
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  z-index: 999;
-}
-
-.nav-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 60px;
-  margin-top: 30px;
-}
-
-.nav-bar img {
-  height: 35px;
-  cursor: pointer;
-}
-
-.desktop-nav-menu {
-  display: flex;
-  color: #171313;
-  font-size: 18px;
-  font-weight: 700;
 }
 
 .nl-link {
@@ -60,7 +39,6 @@ a {
 .nl-dot {
   height: 5px;
   width: 5px;
-  background-color: #171313;
   border-radius: 50%;
   transform: scale(0);
   transition: all 0.2s linear;
@@ -91,104 +69,14 @@ a {
 
 /* Responsive effect for Nav Bar */
 
-@media screen and (min-width: 1500px) {
-  .nav-bar {
-    width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-} 
-
-@media screen and (max-width: 1000px) {
-  .nav-bar {
-    padding: 0 30px;
-  }
-
-  .desktop-nav-menu {
-    font-size: 16px;
-  }
-}
-
 @media screen and (max-width: 600px) {
-  .desktop-nav-menu {
-    display: none;
-  }
-
-  .mobile-menu-background {
-    display: none;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  @keyframes menuBackgroundIntro {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0%);
-    }
-  }
-  @keyframes menuBackgroundOutro {
-    from {
-      transform: translateX(0%);
-    }
-    to {
-      transform: translateX(100%);
-      display: none;
-    }
-  }
-
-  .mobile-nav-menu {
-    display: none;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
-  @keyframes mobileMenuIntro {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes mobileMenuOutro {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-      display: none;
-    }
-  }
-
   .nav-icon {
     display: block;
     font-size: 20px;
   }
 
-  .nav-icon .fa-bars {
-    cursor: pointer;
-  }
-
   .nav-icon .fa-xmark {
     display: none;
-  }
-
-  .nav-bar {
-    padding: 0 20px;
-    margin-top: 20px;
-  }
-
-  .nav-bar img {
-    cursor: default;
-  }
-
-  .mobile-nav-menu .links {
-    margin-top: 140px;
   }
 
   .nl-link {
@@ -210,32 +98,42 @@ a {
     font-size: 55px;
     font-weight: 700;
   }
+}
 
-  .menu-extra-container {
-    width: 100%;
-    position: absolute;
-    bottom: 40px;
-    z-index: 999;
-  }
-  
-  .menu-extra {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
-  }
+/* Animations for Mobile NavBar */
 
-  .socials {
-    font-size: 24px;
+@keyframes menuBackgroundIntro {
+  from {
+    transform: translateX(100%);
   }
-
-  .place-time {
-    display: flex;
-    font-size: 17px;
+  to {
+    transform: translateX(0%);
   }
+}
+@keyframes menuBackgroundOutro {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+    display: none;
+  }
+}
 
-  .place {
-    font-weight: 600;
-    margin-right: 15px;
+@keyframes mobileMenuIntro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes mobileMenuOutro {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
   }
 }

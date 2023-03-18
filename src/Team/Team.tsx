@@ -1,6 +1,11 @@
+import NavBar from '../Components/NavBar';
+
 const TeamsPage = () => {
     return ( 
-        <div>Team Page</div>
+        <div className="Teams">
+            <NavBar logoUrl="Images\Spotify Logo White.svg" color="white" activeLink="Team" />
+            <div>Teams Page</div>
+        </div>
      );
 }
  

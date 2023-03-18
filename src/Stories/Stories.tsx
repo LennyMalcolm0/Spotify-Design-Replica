@@ -1,15 +1,20 @@
 import './Stories.css';
+import NavBar from '../Components/NavBar';
 import PickCategory from '../Components/PickCategory';
 import { Link } from 'react-router-dom';
-import { stories } from '../StoriesData/Data';
+import { stories } from '../AppData/Data';
 
 const StoriesPage = () => {
     return ( 
         <div className="Stories">
+            <NavBar logoUrl="Images\Spotify Logo Black.svg" color="black" activeLink="Stories" />
+
             <div className="top-bg-shape absolute left-[-5vw]">
                 <img src="background-shapes\stories-top-bg.svg" alt="" className="min-h-screen" draggable="false" />
             </div>
+
             <PickCategory pageTextColor="text-black" />
+
             <div className="max-w-[1400px] relative w-full mx-auto mt-[100px] px-[60px] md:px-[30px] sm:px-[15px] grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-16">
                 {stories.map((item, index) => (
                     <div key={index}>

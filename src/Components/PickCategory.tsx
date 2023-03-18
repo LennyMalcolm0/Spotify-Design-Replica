@@ -57,7 +57,7 @@ const PickCategory = ({ pageTextColor }: { pageTextColor: string }) => {
                 </div>
             </div>
 
-            <div className="w-fit whitespace-nowrap text-[152px] leading-[164px] tracking-tight mt-[10px] ml-[50%] translate-x-[-350px]">
+            <div className="w-fit whitespace-nowrap text-[152px] leading-[164px] mt-[10px] ">
                 <span className="category cursor-pointer">All Stories</span>
                 <span className="category cursor-pointer ml-[50px] opacity-40">Design</span>
                 <span className="category cursor-pointer ml-[50px] opacity-40">Inspiration</span>

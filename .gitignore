@@ -24,3 +24,4 @@ yarn-error.log*
 
 # files
 /public/images.jpeg
+/src/Components/Fetch-data.tsx
