@@ -3,6 +3,8 @@ import NavBar from '../Components/NavBar';
 import PickCategory from '../Components/PickCategory';
 import { Link } from 'react-router-dom';
 import { stories } from '../AppData/Data';
+import ViewMore from '../Components/ViewMore';
+import Inbox from '../Components/Inbox';
 
 const StoriesPage = () => {
     return ( 
@@ -46,6 +48,13 @@ const StoriesPage = () => {
                     </div>
                 ))}
             </div>
+
+            <div className="w-full max-w-[1400px] mx-auto mt-[60px] mb-[100px] px-[60px] md:px-[30px] sm:px-[15px] flex justify-between">
+                <div></div>
+                <ViewMore text="View more stories" textColor1="black" textColor2="white" arrowDirection="down" />
+            </div>
+            
+            <Inbox />
         </div>
      );
 }

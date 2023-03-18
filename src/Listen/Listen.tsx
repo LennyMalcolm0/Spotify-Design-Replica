@@ -2,7 +2,7 @@ import NavBar from '../Components/NavBar';
 import PickCategory from '../Components/PickCategory';
 import { musicGenre, listenStories } from '../AppData/Data';
 import ViewMore from '../Components/ViewMore';
-import InputEmail from '../Components/Emails';
+import Inbox from '../Components/Inbox';
 
 const ListenPage = () => {
 
@@ -45,7 +45,8 @@ const ListenPage = () => {
                     <div></div>
                     <ViewMore text="View more stories" textColor1="white" textColor2="black" arrowDirection="down" />
                 </div>
-                <InputEmail />
+                
+                <Inbox />
             </div>
         </div>
      );

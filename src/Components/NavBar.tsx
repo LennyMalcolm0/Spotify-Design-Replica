@@ -55,9 +55,8 @@ const NavBar = ({logoUrl, color, activeLink}: NavProps) => {
             mobileMenu.style.animation = "mobileMenuOutro 0.4s linear 0s 1 normal forwards";
             menuBackground.style.animation = "menuBackgroundOutro 0.5s linear 0s 1 normal forwards";
         }
-
         closeMenuButton.addEventListener("click", closeMenu);
-    
+
         mobileLinkTitle.forEach(linkTitle => {
             const mobileNavDot = linkTitle.previousElementSibling as HTMLElement;
             if (linkTitle.textContent === activeLink) {
@@ -84,9 +83,9 @@ const NavBar = ({logoUrl, color, activeLink}: NavProps) => {
                 }
             }
         })
-      }, []);
+    }, []);
       
-      return (
+    return (
         <div className="Nav-bar">
             <div className="w-full absolute top-0 z-[9999]">
                 <div className="nav-bar max-w-[1400px] flex items-center justify-between px-[60px] md:px-[30px] sm:px-[20px] mt-[30px] sm:mt-[20px] 2xl:mx-auto">
@@ -120,7 +119,7 @@ const NavBar = ({logoUrl, color, activeLink}: NavProps) => {
                     </div>
                 </div>
             </div>
-    
+
             <div className="mobile-menu-background h-full w-full bg-white fixed inset-0"></div>
             <div className="mobile-nav-menu closed w-full h-full absolute">
                 <div className="links mt-[140px]">
@@ -166,7 +165,7 @@ const NavBar = ({logoUrl, color, activeLink}: NavProps) => {
                 </div>
             </div>
         </div>
-      );
+    );
 }
  
 export default NavBar;
