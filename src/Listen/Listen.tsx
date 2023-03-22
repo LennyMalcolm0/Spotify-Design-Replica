@@ -1,8 +1,8 @@
-import NavBar from '../Components/NavBar';
-import PickCategory from '../Components/PickCategory';
+import NavBar from '../GeneralComponents/NavBar';
+import PickCategory from '../GeneralComponents/PickCategory';
 import { musicGenre, listenStories } from '../AppData/Data';
-import ViewMore from '../Components/ViewMore';
-import Inbox from '../Components/Inbox';
+import ViewMore from '../GeneralComponents/ViewMore';
+import Inbox from '../GeneralComponents/Inbox';
 
 const ListenPage = () => {
 

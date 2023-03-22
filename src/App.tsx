@@ -8,7 +8,6 @@ import StoriesPage from './Stories/Stories';
 import ListenPage from './Listen/Listen';
 import TeamsPage from './Team/Team';
 import ToolsPage from './Tools/Tools';
-import NavBar from './Components/NavBar';
 
 function App() {
   // const observer = new IntersectionObserver(entries => {
@@ -20,9 +19,9 @@ function App() {
   //     }
   //   });
   // });
-  
+
   return (
-    <div className="App font-bold tracking-tight">
+    <div className="App font-bold tracking-tight overflow-hidden">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage/>} />

@@ -47,7 +47,7 @@ export const stories = [
     {
         imageSrc: "Images/Stories(Others)/Others_7.svg",
         theme: "Design Systems",
-        heading: "Can I get an Encore? Spotify’s Design System, Three Years On",
+        heading: "Can I get an Encore? Spotify's Design System, Three Years On",
         info: "How has Encore grown and evolved over the last few years? Find out what our design systems team has been up to and the learnings along the way."
     },
     {
@@ -66,7 +66,7 @@ export const stories = [
         imageSrc: "Images/Stories(Others)/Others_10.svg",
         theme: "BEHIND THE SCENES",
         heading: "From Web Page to Web Player: How Spotify Designed a New Homepage Experience",
-        info: "Senior Product Designer Alexandria Goree walks us through the design process of making over Spotify’s homepage."
+        info: "Senior Product Designer Alexandria Goree walks us through the design process of making over Spotify's homepage."
     },
     {
         imageSrc: "Images/Stories(Others)/Others_11.svg",
