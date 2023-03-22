@@ -224,3 +224,97 @@ export const musicGenre = [
     "SOUL",
     "DISCO",
 ]
+
+export const designersProfile = [
+    {
+        imageSrc: "Images/Designers/Vandana Pai.svg",
+        city: "New york",
+        name: "Vandana Pai",
+        bio: "It is so satisfying to pour your energy into creating something (tangible or digital) that is useful, helpful, or inspiring.",
+        role: "Senior Product Designer"
+    },
+    {
+        imageSrc: "Images/Designers/Grace Kwon.svg",
+        city: "New york",
+        name: "Grace Kwon",
+        bio: "The art of gathering people and insights are two areas I'd like to master throughout my life and career in service design.",
+        role: "Senior Service Designer"
+    },
+    {
+        imageSrc: "Images/Designers/Tobi.svg",
+        city: "Stockholm",
+        name: "Tobi Oyadiran",
+        bio: "I work to create more opportunities for artists to make money from their work on Spotify.",
+        role: "Product Designer II"
+    },
+    {
+        imageSrc: "Images/Designers/Inês João.svg",
+        city: "Berlin",
+        name: "Inês João",
+        bio: "As a designer, your life is filled with problem-solving, establishing relationships, and making sure you're providing the most enjoyable journey to people.",
+        role: "Product Designer"
+    },
+    {
+        imageSrc: "Images/Designers/Ashley Moody.svg",
+        city: "New york",
+        name: "Ashley Moody",
+        bio: "Being able to create something that makes someone feel more visible as a human in a digital experience keeps me motivated.",
+        role: "Product Designer II"
+    },
+    {
+        imageSrc: "Images/Designers/Corinne Onetto.svg",
+        city: "Stockholm",
+        name: "Corinne Onetto",
+        bio: "Design isn't just about the perfect pixel in the perfect layout for the perfect user journey. Design is also about the user and collaboration.",
+        role: "Senior Project Manager"
+    },
+    {
+        imageSrc: "Images/Designers/Janey Lee.svg",
+        city: "Stockholm",
+        name: "Janey Lee",
+        bio: "I like my “designer” title because it lets my curiosity run wild. It's allowed me a peek into so many fascinating corners of the world, and I hope to keep using it as long as I can.",
+        role: "Senior Product Designer"
+    },
+    {
+        imageSrc: "Images/Designers/Leslie Ogoe.svg",
+        city: "Jersey city",
+        name: "Leslie Ogoe",
+        bio: "Always felt I was creative but not in the traditional sense. I was more of a creative in how to just get things done with limited or no resources.",
+        role: "Design Program Manager"
+    },
+    {
+        imageSrc: "Images/Designers/Kavita.svg",
+        city: "New york",
+        name: "Kevita Chepovetsky",
+        bio: "That experience taught me that the 'why' of a design is just as important than the design itself.",
+        role: "Senior Product Designer"
+    },
+    {
+        imageSrc: "Images/Designers/Nanci Veitch.svg",
+        city: "London",
+        name: "Nanci Veitch",
+        bio: "There is a lot of joy to be had in facilitating or creating the space for amazing creativity or creatives to thrive.",
+        role: "Design Program Manager"
+    },
+    {
+        imageSrc: "Images/Designers/René Simon.svg",
+        city: "Stockholm",
+        name: "René Simonsson",
+        bio: "I get to enter a new unfamiliar space, make sense of it using different design processes and tools, and bring forth a narrative.",
+        role: "Product Designer I"
+    },
+    {
+        imageSrc: "Images/Designers/Simeon Fada.svg",
+        city: "Stockholm",
+        name: "Simeon Fadahunsi",
+        bio: "I chose to be a designer because it allows me to experiment and keep on iterating.",
+        role: "Summer Intern Product Designer"
+    },
+    {
+        imageSrc: "Images/Designers/Ryan Smith.svg",
+        city: "Stockholm",
+        name: "Ryan Smith",
+        bio: "For me, being a Product Designer is the best way to use those muscles of curiosity and creativity.",
+        role: "Senior Product Designer"
+    },
+]
