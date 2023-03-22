@@ -41,6 +41,11 @@
 .intro-h {
     height: calc(100vh + 80px);
 }
+@media screen and (max-width: 600px) {
+    .intro-h {
+        height: fit-content;
+    }
+}
 
 .bio div:nth-child(1) {
     animation: bioText 0.3s ease-in 0s 1 normal forwards;
