@@ -1,19 +1,39 @@
 @keyframes openCategory {
     from {
-        transform: translateY(-100%);
+        top: -100%;
         display: block;
     }
     to {
-        transform: translateY(0);
+        top: 0;
         display: block;
     }
 }
 @keyframes closeCategory {
     from {
-        transform: translateY(0);
+        top: 0;
     }
     to {
-        transform: translateY(-100%);
+        top: -100%;
+        display: none;
+    }
+}
+/* Category animations on smaller screens */
+@keyframes openCategorySM {
+    from {
+        bottom: -100%;
+        display: block;
+    }
+    to {
+        bottom: 0;
+        display: block;
+    }
+}
+@keyframes closeCategorySM {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: -100%;
         display: none;
     }
 }

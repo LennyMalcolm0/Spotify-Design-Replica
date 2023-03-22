@@ -17,6 +17,15 @@ const StoriesPage = () => {
 
             <PickCategory pageTextColor="text-black" />
 
+            <div className="w-fit relative whitespace-nowrap text-[152px] md:text-[90px] sm:text-[64px] text-black mt-[10px] leading-[162px] md:leading-[95px] sm:leading-[67px] sm:mt-0 ml-[20%] sm:translate-x-0 select-none">
+                <span className="category cursor-pointer">All Stories</span>
+                <span className="category cursor-pointer ml-[50px] opacity-20">Design</span>
+                <span className="category cursor-pointer ml-[50px] opacity-20">Inspiration</span>
+                <span className="category cursor-pointer ml-[50px] opacity-20">Noted</span>
+                <span className="category cursor-pointer ml-[50px] opacity-20">Process</span>
+                <span className="category cursor-pointer ml-[50px] opacity-20">Listen</span>
+            </div>
+
             <div className="w-full max-w-[1400px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] ">
                 <div className="relative grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-16 mt-[100px]">
                     {stories.map((item, index) => (
@@ -25,7 +34,7 @@ const StoriesPage = () => {
                                 <div className="story-card group h-fit hover:cursor-pointer">
                                     <div className="w-full relative">
                                         <img src={item.imageSrc} alt="" className="w-full" />
-                                        <div className="w-[45px] h-[45px] transition-all duration-200 group-hover:bg-white rounded-full border-2 border-gray-400 border-opacity-40 border-solid text-[14px] absolute bottom-[25px] left-[25px] flex items-center justify-center ">
+                                        <div className="w-[45px] h-[45px] transition-all duration-200 group-hover:bg-white rounded-full border-2 border-gray-400 border-opacity-20 border-solid text-[14px] absolute bottom-[25px] left-[25px] flex items-center justify-center ">
                                             <i className="fa-solid fa-play"></i>
                                         </div>
                                     </div>
