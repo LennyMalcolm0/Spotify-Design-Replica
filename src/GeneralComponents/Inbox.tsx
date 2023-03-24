@@ -3,7 +3,7 @@ import './Components.css';
 const Inbox = () => {
     return ( 
         <div className="Inbox">
-            <div className="w-full intro-h bg-black text-white">
+            <div className="w-full inbox-h bg-black text-white">
                 <div className="w-full max-w-[1400px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] md:flex flex-col items-center md:text-center">
                     <div className="w-[75%] md:w-[90%] pt-[120px] sm:pt-[80px] text-[62px] md:text-[55px] sm:text-[42px] leading-[69px] md:leading-[59px] sm:leading-[45px]">Want Spotify Design updates sent straight to your inbox?</div>
 

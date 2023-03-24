@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './Home.css';
+import { designersProfile } from '../AppData/Data';
 
 const Designers = () => {
     useEffect(() => {
@@ -13,32 +14,62 @@ const Designers = () => {
             carouselMouse.style.left = `${x}px`;
             carouselMouse.style.top = `${y}px`;
 		});
+
+        const profiles = document.querySelectorAll(".profile");
+        // Adding space between profiles
+        for (let i = 1; i < profiles.length; i++) {
+            const profile = profiles[i] as HTMLElement;
+            profile.style.marginLeft = "150px";
+        };
+
+        for (let i = 0; i < profiles.length; i+=3) {
+            const profile = profiles[i].firstElementChild as HTMLElement;
+            profile.classList.add("position1-profile")
+
+            const profileBio = profiles[i].firstElementChild?.children[1] as HTMLElement;
+            profileBio.classList.add("position1-bio")
+        }
+        for (let i = 1; i < profiles.length; i+=3) {
+            const profile = profiles[i].firstElementChild as HTMLElement;
+            profile.classList.add("position2-profile")
+
+            const profileBio = profiles[i].firstElementChild?.children[1] as HTMLElement;
+            profileBio.classList.add("position2-bio")
+        }
+        for (let i = 2; i < profiles.length; i+=3) {
+            const profile = profiles[i].firstElementChild as HTMLElement;
+            profile.classList.add("position3-profile");
+
+            const profileBio = profiles[i].firstElementChild?.children[1] as HTMLElement;
+            profileBio.classList.add("position3-bio")
+        }
     }, [])
 
     return ( 
         <div className="Designers w-full group relative">
-            <div className="w-fit flex cursor-grab select-none">
-                <div className="text-black">
-                    <div className="profile group/profile relative w-[500px] cursor-pointer">
-                        <img src="Images\Designers\Tobi.svg" alt="" className="w-fit" draggable="false" />
+            <div className="w-full flex items-center cursor-grab select-none overflow-x-scroll overflow-y-hidden">
+                {designersProfile.map((detail, index) => (
+                    <div className="profile text-black" key={index}>
+                        <div className="relative cursor-pointer">
+                            <img src={detail.imageSrc} alt="" className="w-full h-full object-cover peer" draggable="false" />
 
-                        <div className="bio hidden group-hover/profile:flex h-[500px] w-[300px] absolute left-[15px] bottom-[15px] p-[25px] bg-black text-white font-normal flex-col justify-between ">
-                            <div className="text-[24px] leading-[28px]">If you'd asked the kid version of me what I wanted to be when I grew up,
-                                I would've definitely told you “teddy bear surgeon”. If you'd asked me to be serious, I'd tell you “someone who designs things”.</div>
-                            <div className="text-[16px] underline opacity-0">READ MORE</div>
+                            <div className="bio hidden peer-hover:flex hover:flex absolute left-[15px] bottom-[15px] p-[25px] bg-black text-white font-normal flex-col justify-between ">
+                                <div className="text-[24px] leading-[28px]">{`"${detail.bio}"`}</div>
+                                <div className="text-[16px] underline opacity-0">READ MORE</div>
+                            </div>
+
+                            <div className="flex items-center rotate-[-90deg] absolute top-[37px] -right-[60px]">
+                                <div className="bg-black h-2 w-2 rounded-full mr-1 "></div>
+                                <div className="text-sm uppercase">{detail.city}</div>
+                            </div>
                         </div>
 
-                        <div className="flex items-center rotate-[-90deg] absolute top-[37px] -right-[60px]">
-                            <div className="bg-black h-2 w-2 rounded-full mr-1 "></div>
-                            <div className="text-sm uppercase">Stockholm</div>
+                        <div className="text-[24px] leading-[28px] mt-[5px]">
+                            <div>{detail.name}</div>
+                            <div className="font-normal">{detail.role}</div>
                         </div>
                     </div>
-
-                    <div className="text-[24px] leading-[28px] mt-[5px]">
-                        <div>Tobi Oyadiran</div>
-                        <div className="font-normal">Product Designer II</div>
-                    </div>
-                </div>
+                ))}
             </div>
                 
             {/* <div className="carousel-mouse hidden group-hover:block absolute">
@@ -46,7 +77,7 @@ const Designers = () => {
                     <i className="fa-solid fa-play rotate-[180deg]"></i>
                     <i className="fa-solid fa-play"></i>
                 </div>
-            </div> */}
+            </div>*/}
         </div>
      );
 }

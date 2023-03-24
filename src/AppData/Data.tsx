@@ -248,18 +248,18 @@ export const designersProfile = [
         role: "Product Designer II"
     },
     {
-        imageSrc: "Images/Designers/Inês João.svg",
-        city: "Berlin",
-        name: "Inês João",
-        bio: "As a designer, your life is filled with problem-solving, establishing relationships, and making sure you're providing the most enjoyable journey to people.",
-        role: "Product Designer"
-    },
-    {
         imageSrc: "Images/Designers/Ashley Moody.svg",
         city: "New york",
         name: "Ashley Moody",
         bio: "Being able to create something that makes someone feel more visible as a human in a digital experience keeps me motivated.",
         role: "Product Designer II"
+    },
+    {
+        imageSrc: "Images/Designers/Inês João.svg",
+        city: "Berlin",
+        name: "Inês João",
+        bio: "As a designer, your life is filled with problem-solving, establishing relationships, and making sure you're providing the most enjoyable journey to people.",
+        role: "Product Designer"
     },
     {
         imageSrc: "Images/Designers/Corinne Onetto.svg",
@@ -290,18 +290,18 @@ export const designersProfile = [
         role: "Senior Product Designer"
     },
     {
-        imageSrc: "Images/Designers/Nanci Veitch.svg",
-        city: "London",
-        name: "Nanci Veitch",
-        bio: "There is a lot of joy to be had in facilitating or creating the space for amazing creativity or creatives to thrive.",
-        role: "Design Program Manager"
-    },
-    {
         imageSrc: "Images/Designers/René Simon.svg",
         city: "Stockholm",
         name: "René Simonsson",
         bio: "I get to enter a new unfamiliar space, make sense of it using different design processes and tools, and bring forth a narrative.",
         role: "Product Designer I"
+    },
+    {
+        imageSrc: "Images/Designers/Nanci Veitch.svg",
+        city: "London",
+        name: "Nanci Veitch",
+        bio: "There is a lot of joy to be had in facilitating or creating the space for amazing creativity or creatives to thrive.",
+        role: "Design Program Manager"
     },
     {
         imageSrc: "Images/Designers/Simeon Fada.svg",

@@ -210,3 +210,62 @@
         padding: 0 15px;
     }
 }
+
+.bio {
+    animation: opacity 0.2s ease-in 0s 1 normal forwards;
+}
+
+.bio div:nth-child(1) {
+    animation: bioText 0.3s ease-in 0s 1 normal forwards;
+}
+
+.bio div:nth-child(2) {
+    animation: opacity 0.5s ease-in 0.3s 1 normal forwards;
+}
+
+@keyframes bioText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.position1-profile {
+    height: 720px;
+    width: 550px;
+}
+.position1-bio {
+    height: 450px;
+    width: 300px;
+}
+
+.position2-profile {
+    height: 450px;
+    width: 350px;
+}
+.position2-bio {
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+}
+
+.position3-profile {
+    height: 600px;
+    width: 500px;
+}
+.position3-bio {
+    height: 350px;
+    width: 300px;
+}
