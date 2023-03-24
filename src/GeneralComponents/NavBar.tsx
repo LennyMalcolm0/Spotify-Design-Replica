@@ -145,22 +145,22 @@ const NavBar = ({logoUrl, color, activeLink}: NavProps) => {
                 </div>
                 <div className="menu-extra w-full absolute bottom-[40px] z-[999]">
                     <div className="flex items-center justify-between px-[15px]">
-                    <div className="text-[24px] font-medium">
-                        <div>Instagram</div>
-                        <div>Twitter</div>
-                    </div>
-                    <div className="flex text-[17px]">
-                        <div className="font-semibold mr-[15px]">
-                        <div>SE</div>
-                        <div>UK</div>
-                        <div>US</div>
+                        <div className="text-[24px] font-medium">
+                            <div>Instagram</div>
+                            <div>Twitter</div>
                         </div>
-                        <div className="font-normal">
-                        <div>06:09:28</div>
-                        <div>05:09:28</div>
-                        <div>12:09:28</div>
+                        <div className="flex text-[17px]">
+                            <div className="font-semibold mr-[15px]">
+                                <div>SE</div>
+                                <div>UK</div>
+                                <div>US</div>
+                            </div>
+                            <div className="font-normal">
+                                <div>06:09:28</div>
+                                <div>05:09:28</div>
+                                <div>12:09:28</div>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>

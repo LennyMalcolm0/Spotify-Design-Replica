@@ -47,7 +47,7 @@ const Designers = () => {
 
     return ( 
         <div className="Designers w-full group relative">
-            <div className="w-full flex items-center cursor-grab select-none overflow-x-scroll overflow-y-hidden">
+            <div className="w-full flex items-center cursor-grab select-none ">
                 {designersProfile.map((detail, index) => (
                     <div className="profile text-black" key={index}>
                         <div className="relative cursor-pointer">

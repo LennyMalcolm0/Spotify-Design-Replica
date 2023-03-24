@@ -4,6 +4,7 @@ import { stories } from '../AppData/Data';
 import NavBar from '../GeneralComponents/NavBar';
 import ViewMore from '../GeneralComponents/ViewMore';
 import Designers from './designersCarousel';
+import Inbox from '../GeneralComponents/Inbox';
 
 const HomePage = () => {
     const homeStories = [];
@@ -108,8 +109,10 @@ const HomePage = () => {
                 </div>
 
                 <Designers/>
-
-                <div className="mt-[50px]">Sodffffbgfrdn</div>
+            </div>
+            
+            <div className="mt-[80px]">
+                <Inbox />
             </div>
         </div>
      );
