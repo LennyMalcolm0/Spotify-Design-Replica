@@ -115,13 +115,13 @@ const NavBar = ({logoUrl, color, activeLink}: NavProps) => {
         
                     <div className="nav-icon">
                         <i className={`fa-solid fa-bars cursor-pointer text-${color}`}></i>
-                        <i className="fa-solid fa-xmark"></i>
+                        <i className="fa-solid fa-xmark cursor-pointer text-black"></i>
                     </div>
                 </div>
             </div>
 
-            <div className="mobile-menu-background h-full w-full bg-white fixed inset-0"></div>
-            <div className="mobile-nav-menu closed w-full h-full absolute">
+            <div className="mobile-menu-background h-full w-full bg-white fixed inset-0 z-[999]"></div>
+            <div className="mobile-nav-menu closed w-full h-full absolute z-[999]">
                 <div className="links mt-[140px]">
                     <div className="nl-link">
                         <div className="nl-dot bg-black"></div>
@@ -143,9 +143,9 @@ const NavBar = ({logoUrl, color, activeLink}: NavProps) => {
                         <Link to="/tools"><div className="nl-link-title">Tools</div></Link>
                     </div>
                 </div>
-                <div className="menu-extra w-full absolute bottom-[40px] z-[999]">
+                <div className="menu-extra w-full mt-[60px] bottom-[40px] z-[9999] text-black">
                     <div className="flex items-center justify-between px-[15px]">
-                        <div className="text-[24px] font-medium">
+                        <div className="text-[24px] font-normal">
                             <div>Instagram</div>
                             <div>Twitter</div>
                         </div>

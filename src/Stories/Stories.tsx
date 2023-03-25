@@ -11,8 +11,8 @@ const StoriesPage = () => {
         <div className="Stories">
             <NavBar logoUrl="Images\Spotify Logo Black.svg" color="black" activeLink="Stories" />
 
-            <div className="top-bg-shape absolute left-[-5vw]">
-                <img src="background-shapes\stories-top-bg.svg" alt="" className="min-h-screen" draggable="false" />
+            <div className="top-bg-shape absolute left-[-5vw] sm:left-0">
+                <img src="background-shapes\stories-top-bg.svg" alt="" className="" draggable="false" />
             </div>
 
             <PickCategory pageTextColor="text-black" />
