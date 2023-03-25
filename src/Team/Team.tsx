@@ -1,9 +1,8 @@
 import NavBar from '../GeneralComponents/NavBar';
 import ViewMore from '../GeneralComponents/ViewMore';
-import { useEffect } from 'react';
 import { stories } from '../AppData/Data';
-import StoriesComponent from '../GeneralComponents/StoriesComp';
 import Disciplines from './Disciplines';
+import { disciplines } from '../AppData/Data';
 
 const TeamsPage = () => {
     const teamStories = [];
@@ -61,10 +60,11 @@ const TeamsPage = () => {
 
                 <div className="text-[30px] mt-[100px]">Our Disciplines</div>
                 <div className="relative grid grid-cols-2 sm:grid-cols-1 gap-6 mt-[20px] mb-[100px]">
-                    <Disciplines />
-                    <Disciplines />
-                    <Disciplines />
-                    <Disciplines />
+                    {disciplines.map((data, index) => (
+                        <div key={index}>
+                            <Disciplines heading={data.heading} info={data.info} bgShapeSrc={data.bgShapeSrc} randomShapeSrc={data.randomShapeSrc} bgColor={data.bgColor} />
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
