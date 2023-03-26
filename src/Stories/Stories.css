@@ -3,11 +3,11 @@
 }
 
 @keyframes topBgShape {
-    from {
+    0% {
         transform: translateX(-100%);
         top: 2vh;
     }
-    to {
+    100% {
         transform: translateX(0%);
         top: -5vh;
     }

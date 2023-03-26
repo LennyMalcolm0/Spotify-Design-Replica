@@ -20,6 +20,7 @@ export const stories = [
     },
     {
         imageSrc: "Images/Stories(Others)/Others_4.svg",
+        theme: "Listen",
         listenTheme: [
             "dance",
             "ambient",
@@ -36,6 +37,7 @@ export const stories = [
     },
     {
         imageSrc: "Images/Stories(Others)/Others_6.svg",
+        theme: "Listen",
         listenTheme: [
             "indie",
             "folk",
@@ -70,6 +72,7 @@ export const stories = [
     },
     {
         imageSrc: "Images/Stories(Others)/Others_11.svg",
+        theme: "Listen",
         listenTheme: [
             "brazilian",
             "disco",
@@ -92,6 +95,7 @@ export const stories = [
     },
     {
         imageSrc: "Images/Stories(Others)/Others_14.svg",
+        theme: "Listen",
         listenTheme: [
             "soul",
             "disco",
@@ -108,6 +112,7 @@ export const stories = [
     },
     {
         imageSrc: "Images/Stories(Others)/Others_16.svg",
+        theme: "Listen",
         listenTheme: [
             "brazilian",
             "soul",

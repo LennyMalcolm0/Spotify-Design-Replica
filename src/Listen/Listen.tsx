@@ -3,6 +3,7 @@ import PickCategory from '../GeneralComponents/PickCategory';
 import { musicGenre, listenStories } from '../AppData/Data';
 import ViewMore from '../GeneralComponents/ViewMore';
 import Inbox from '../GeneralComponents/Inbox';
+import StoriesComponent from '../GeneralComponents/StoriesComp';
 
 const ListenPage = () => {
 
@@ -34,21 +35,7 @@ const ListenPage = () => {
                     <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-16 mt-[100px] sm:mt-[60px]">
                         {listenStories.map((item, index) => (
                             <div key={index}>
-                                <div className="story-card group h-fit hover:cursor-pointer">
-                                    <div className="w-full relative">
-                                        <img src={item.imageSrc} alt="" className="w-full" />
-                                        <div className="w-[45px] h-[45px] transition-all duration-200 group-hover:bg-white rounded-full border-2 border-gray-400 border-opacity-40 border-solid text-[14px] absolute bottom-[25px] left-[25px] flex items-center justify-center ">
-                                            <i className="fa-solid fa-play"></i>
-                                        </div>
-                                    </div>
-                                    <div className="themes w-fit peer flex flex-wrap gap-x-2 mt-0.5 mb-1">
-                                        {item.listenTheme.map((theme, index) => (
-                                            <div key={index} className="w-fit py-px px-1.5 mt-2 bg-[#CCF566] text-black text-[14px] whitespace-nowrap hover:opacity-50 uppercase">{theme}</div>
-                                        ))}
-                                    </div>
-                                    <div className="w-full text-[24px] text-white sm:text-[18px] leading-6 capitalize group-hover:underline peer-hover:no-underline">{item.heading}</div>
-                                    <div className="w-full mt-2 text-[14px] text-white font-normal leading-5 normal-case">{item.info}</div>
-                                </div>
+                                <StoriesComponent imageSrc={item.imageSrc} listenTheme={item.listenTheme} heading={item.heading} info={item.info} />
                             </div>
                         ))}
                     </div>

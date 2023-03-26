@@ -27,7 +27,7 @@ const TeamsPage = () => {
                 <div className="relative">
                     <div className="text-[152px] md:text-[90px] sm:text-[64px] flex justify-center pt-[130px]">Team</div>
 
-                    <div className="flex justify-center">
+                    <div className="flex justify-center mt-[30px]">
                         <div className="w-[730px] md:w-[70%] sm:w-[90%] text-center text-[30px] md:text-[26px] sm:text-[22px] ">
                             We're a cross-disciplinary team that loves to create great experiences and make meaningful connections between listeners and creators. 
                             Learn more about our design community below and browse the latest opportunities on our team.

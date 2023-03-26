@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 interface Props {
     heading: string,
     info: string,
@@ -6,6 +7,11 @@ interface Props {
     bgColor: string,
 }
 const Disciplines = ({heading, info, bgShapeSrc, randomShapeSrc, bgColor}: Props) => {
+    // useEffect(() => {
+    //     const backgroundColor = bgColor;
+    // }, []);
+    console.log(bgColor)
+
     return ( 
         <div className="Discipline transition-all duration-300">
             <div className={`h-[600px] w-full group relative border border-[#3f3f3f] px-[50px] py-[40px] bg-black hover:bg-${bgColor} text-white hover:text-black 
