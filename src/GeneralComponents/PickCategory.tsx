@@ -37,7 +37,7 @@ const PickCategory = ({ pageTextColor }: { pageTextColor: string }) => {
 
     return ( 
         <div className={`Pick-category relative ${pageTextColor}`}>
-            <div className="w-full h-full">
+            <div className="w-screen h-full">
                 <div className="flex items-center justify-center mt-[150px] text-[32px] md:text-[28px] sm:text-[24px] font-normal">
                     <div className="open-category flex cursor-pointer">
                         <div>Pick a category</div>

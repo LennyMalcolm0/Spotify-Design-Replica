@@ -21,7 +21,7 @@ function App() {
   // });
 
   return (
-    <div className="App w-screen overflow-hidden font-bold tracking-tight">
+    <div className="App w-screen overflow-x-hidden font-bold tracking-tight">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage/>} />

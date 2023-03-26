@@ -202,6 +202,57 @@ export const listenStories = [
     },
 ]
 
+export const toolStories = [
+    {
+        imageSrc: "Images/Stories(Tools)/Tools_1.svg",
+        theme: "Tools",
+        heading: "Performance Cards: Designing with Meaning and Empathy",
+        info: "Challenge the way you think and serve access-constrained users with these cards."
+    },
+    {
+        imageSrc: "Images/Stories(Tools)/Tools_2.svg",
+        theme: "Tools",
+        heading: "Assessing Constraints: Making Products for all Users",
+        info: "The team behind Spotify Lite created this tool to ensure they're building products for the people around the world who face technological challenges."
+    },
+    {
+        imageSrc: "Images/Stories(Tools)/Tools_3.svg",
+        theme: "Tools",
+        heading: "An All-Inclusive Figma Template for Your Next Remote Design Sprint",
+        info: "Browse the template Senior Product Designer, Alexandria Goree, uses to plan and execute a fully remote design sprint."
+    },
+    {
+        imageSrc: "Images/Stories(Tools)/Tools_4.svg",
+        theme: "Tools",
+        heading: "Measuring, Defining and Improving Productivity: The Design Productivity Blueprint",
+        info: "The Design Productivity Blueprint helps people with a stake in design output ensure designers spend their time on high-value work."
+    },
+    {
+        imageSrc: "Images/Stories(Tools)/Tools_5.svg",
+        theme: "Tools",
+        heading: "Scorecards: Creating Alignment Throughout the Process",
+        info: "Our Scorecards tool was created by some Principal Designers on Spotify's Premium R&D team to help keep everyone aligned and projects moving forward."
+    },
+    {
+        imageSrc: "Images/Stories(Tools)/Tools_6.svg",
+        theme: "Tools",
+        heading: "Investigating Consequences with Our Ethics Assessment",
+        info: "A self-service tool by Spotify's Ethics Guild to help teams investigate ethical questions when developing a product or service."
+    },
+    {
+        imageSrc: "Images/Stories(Tools)/Tools_7.svg",
+        theme: "Tools",
+        heading: "From Gut to Plan: The Thoughtful Execution Framework",
+        info: "Annina Koskinen presents a framework she's developed to help her teams at Spotify reach their goals and ship with impact."
+    },
+    {
+        imageSrc: "Images/Stories(Tools)/Tools_8.svg",
+        theme: "Tools",
+        heading: "How Spotify Organises Work in Figma to Improve Collaboration",
+        info: "We've opened up the music box and described how we've shaped the tool to suit our needs and culture at Spotify."
+    },
+]
+
 export const musicGenre = [
     "FOLK",
     "BRAZILIAN",
