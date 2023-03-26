@@ -3,6 +3,7 @@ import ViewMore from '../GeneralComponents/ViewMore';
 import { stories } from '../AppData/Data';
 import Disciplines from './Disciplines';
 import { disciplines } from '../AppData/Data';
+import Inbox from '../GeneralComponents/Inbox';
 
 const TeamsPage = () => {
     const teamStories = [];
@@ -15,7 +16,7 @@ const TeamsPage = () => {
         <div className="Teams bg-[black] h-full w-screen text-white">
             <NavBar logoUrl="Images\Spotify Logo White.svg" color="white" activeLink="Team" />
 
-            <div className="w-full max-w-[1400px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] relative">
+            <div className="w-full max-w-[1400px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] relative transition-all duration-300">
                 <div className="absolute top-[30px] sm:top-[10px] left-[50px] md:left-0">
                     <img src="background-shapes/(Tools) Top-sec Red Shape.svg" alt="" className="lg:h-[300px] md:h-[250px] sm:h-[200px] " />
                 </div>
@@ -31,7 +32,6 @@ const TeamsPage = () => {
                             We're a cross-disciplinary team that loves to create great experiences and make meaningful connections between listeners and creators. 
                             Learn more about our design community below and browse the latest opportunities on our team.
                         </div>
-                        {/* <div className="blue-line absolute top-[130px] left-[360px] "><img src="background-shapes\(Tools) Text blue line.svg" alt="" /></div> */}
                     </div>
 
                     <div className="flex justify-center mt-10">
@@ -59,14 +59,39 @@ const TeamsPage = () => {
                 </div>
 
                 <div className="text-[30px] mt-[100px]">Our Disciplines</div>
-                <div className="relative grid grid-cols-2 sm:grid-cols-1 gap-6 mt-[20px] mb-[100px]">
+                <div className="relative grid grid-cols-2 sm:grid-cols-1 gap-6 mt-[20px]">
                     {disciplines.map((data, index) => (
                         <div key={index}>
                             <Disciplines heading={data.heading} info={data.info} bgShapeSrc={data.bgShapeSrc} randomShapeSrc={data.randomShapeSrc} bgColor={data.bgColor} />
                         </div>
                     ))}
                 </div>
+
+                <div className="text-[30px] mt-[100px]">Join the band</div>
+                <div className="w-[700px] group flex justify-between mt-[40px] cursor-pointer">
+                    <div>
+                        <div className="flex items-center">
+                            <div className="w-2 h-2 rounded-full bg-white mr-1"></div>
+                            <div className="text-[14px]">MIAMI</div>
+                        </div>
+                        <div className="text-[24px] group-hover:underline">Design Manager - Editorial, LatAm</div>
+                    </div>
+                    <div className="w-7 h-7 ml-[5px] rounded-full flex items-center justify-center bg-white opacity-0 group-hover:opacity-100">
+                        <i className="fa-solid fa-arrow-up rotate-45 text-black "></i>
+                    </div>
+                </div>
+                <div className="flex justify-between my-[100px]">
+                    <div></div>
+                    <div className="flex items-center group cursor-pointer">
+                        <div className="text-[14px]">GO TO SPOTIFY JOBS</div>
+                        <div className="w-[60px] h-[60px] ml-[10px] rounded-full border border-[#3f3f3f] flex items-center justify-center group-hover:bg-white">
+                            <i className="fa-solid fa-arrow-up rotate-45 text-[18px] text-white group-hover:text-black "></i>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            <Inbox />
         </div>
      );
 }
