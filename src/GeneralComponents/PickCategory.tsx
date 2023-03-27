@@ -37,7 +37,7 @@ const PickCategory = ({ pageTextColor }: { pageTextColor: string }) => {
 
     return ( 
         <div className={`Pick-category relative ${pageTextColor}`}>
-            <div className="w-screen h-full">
+            <div className="w-full">
                 <div className="flex items-center justify-center mt-[150px] text-[32px] md:text-[28px] sm:text-[24px] font-normal">
                     <div className="open-category flex cursor-pointer">
                         <div>Pick a category</div>
@@ -66,9 +66,16 @@ const PickCategory = ({ pageTextColor }: { pageTextColor: string }) => {
                         </div>
                     </div>
                 </div>
-            </div>
 
-            
+                <div className="whitespace-nowrap text-[152px] md:text-[90px] sm:text-[60px] overflow-hidden ml-[20%] select-none">
+                    <span className="category cursor-pointer">All Stories</span>
+                    <span className="category cursor-pointer ml-[50px] opacity-20">Design</span>
+                    <span className="category cursor-pointer ml-[50px] opacity-20">Inspiration</span>
+                    <span className="category cursor-pointer ml-[50px] opacity-20">Noted</span>
+                    <span className="category cursor-pointer ml-[50px] opacity-20">Process</span>
+                    <span className="category cursor-pointer ml-[50px] opacity-20">Listen</span>
+                </div>
+            </div>
         </div>
      );
 }

@@ -30,10 +30,10 @@ const StoriesComponent = ({imageSrc, theme, listenTheme, heading, info}: Props) 
         <div className="Stories-component">
             {theme ?
                 listenTheme ?
-                    <div className="story-card group h-fit hover:cursor-pointer">
+                    <div className="story-card group h-fit cursor-pointer transition-all duration-200">
                         <div className="w-full relative">
                             <img src={imageSrc} alt="" className="w-full" />
-                            <div className="w-[45px] h-[45px] transition-all duration-200 group-hover:bg-white rounded-full border-2 
+                            <div className="w-[45px] h-[45px] group-hover:bg-white rounded-full border-2 
                             border-gray-400 border-opacity-40 border-solid text-[14px] absolute bottom-[25px] left-[25px] flex items-center justify-center ">
                                 <i className="fa-solid fa-play"></i>
                             </div>
@@ -45,19 +45,19 @@ const StoriesComponent = ({imageSrc, theme, listenTheme, heading, info}: Props) 
                             ))}
                         </div>
                         <div className="w-full text-[24px] sm:text-[18px] leading-6 group-hover:underline peer-hover:no-underline">{heading}</div>
-                        <div className="w-full mt-2 text-[14px] font-normal leading-5 tracking-tight">{info}</div>
+                        <div className="w-full mt-2 text-[14px] font-normal leading-5">{info}</div>
                     </div> :
-                    <div className="story-card group h-fit hover:cursor-pointer">
+                    <div className="story-card group h-fit cursor-pointer">
                         <img src={imageSrc} alt="" className="w-full" />
                         <div className="peer w-fit py-px px-1.5 mt-2.5 mb-1 bg-black text-[14px] text-white hover:opacity-50 uppercase">{theme}</div>
                         <div className="w-full text-[24px] sm:text-[18px] leading-6 group-hover:underline peer-hover:no-underline">{heading}</div>
-                        <div className="w-full mt-2 text-[14px] font-normal leading-5 tracking-tight">{info}</div>
+                        <div className="w-full mt-2 text-[14px] font-normal leading-5">{info}</div>
                     </div>
             :
-                <div className="story-card group h-fit hover:cursor-pointer">
+                <div className="story-card group h-fit cursor-pointer transition-all duration-200">
                     <div className="w-full relative">
                         <img src={imageSrc} alt="" className="w-full" />
-                        <div className="w-[45px] h-[45px] transition-all duration-200 group-hover:bg-white rounded-full border-2 
+                        <div className="w-[45px] h-[45px] group-hover:bg-white rounded-full border-2 
                         border-gray-400 border-opacity-40 border-solid text-[14px] absolute bottom-[25px] left-[25px] flex items-center justify-center ">
                             <i className="fa-solid fa-play"></i>
                         </div>

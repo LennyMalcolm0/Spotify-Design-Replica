@@ -88,7 +88,7 @@ const NavBar = ({logoUrl, color, activeLink}: NavProps) => {
     return (
         <div className="Nav-bar">
             <div className="w-full absolute top-0 z-[9999]">
-                <div className="nav-bar max-w-[1400px] flex items-center justify-between px-[60px] md:px-[30px] sm:px-[20px] mt-[30px] sm:mt-[20px] 2xl:mx-auto">
+                <div className="nav-bar max-w-[2000px] flex items-center justify-between px-[60px] md:px-[30px] sm:px-[20px] mt-[30px] sm:mt-[20px] 2xl:mx-auto">
                     <Link to="/"><img src={logoUrl} alt="" className="h-[35px] cursor-pointer" /></Link>
         
                     <div className="desktop-nav-menu flex text-[18px] md:text-[16px] sm:hidden">
@@ -143,7 +143,7 @@ const NavBar = ({logoUrl, color, activeLink}: NavProps) => {
                         <Link to="/tools"><div className="nl-link-title">Tools</div></Link>
                     </div>
                 </div>
-                <div className="menu-extra w-full mt-[60px] bottom-[40px] z-[9999] text-black">
+                <div className="menu-extra w-full absolute bottom-[40px] z-[9999] text-black">
                     <div className="flex items-center justify-between px-[15px]">
                         <div className="text-[24px] font-normal">
                             <div>Instagram</div>

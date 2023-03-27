@@ -4,7 +4,7 @@ const Inbox = () => {
     return ( 
         <div className="Inbox">
             <div className="w-full h-[750px] sm:h-fit bg-black text-white">
-                <div className="w-full max-w-[1400px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] md:flex flex-col items-center md:text-center">
+                <div className="w-full max-w-[2000px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] md:flex flex-col items-center md:text-center">
                     <div className="w-[75%] md:w-[90%] pt-[120px] sm:pt-[80px] text-[62px] md:text-[55px] sm:text-[42px] leading-[69px] md:leading-[59px] sm:leading-[45px]">Want Spotify Design updates sent straight to your inbox?</div>
 
                     <div className="w-[500px] md:w-[90%] sm:w-full mt-[200px] xl:mt-[140px] md:mt-[80px] float-right md:float-none">

@@ -12,21 +12,16 @@ const ToolsPage = () => {
             </div>
             <div className="relative">
                 <div className="text-[152px] md:text-[90px] sm:text-[64px] flex justify-center pt-[130px]">Tools</div>
-                <div className="sm:w-[90%] text-center text-[30px] md:text-[26px] sm:text-[22px] mt-[30px] ">The design resources we rely on.</div>
+                <div className="text-center text-[30px] md:text-[26px] sm:text-[22px] mt-[30px] sm:mt-[15px] sm:px-[15px] ">The design resources we rely on.</div>
             </div>
             <div className="w-full max-w-[2000px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] ">
-                <div className="relative grid grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-16 mt-[100px]">
+                <div className="relative grid grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-16 md:gap-y-8 mt-[100px] md:mt-[60px]">
                     {toolStories.map((item, index) => (
                         <div key={index}>
                             <StoriesComponent imageSrc={item.imageSrc} theme={item.theme} heading={item.heading} info={item.info} />
                         </div>
                     ))}
                 </div>
-
-                {/* <div className="flex justify-between mt-[60px] mb-[100px]">
-                    <div></div>
-                    <ViewMore text="View more stories" textColor1="black" textColor2="white" arrowDirection="down" />
-                </div> */}
             </div>
         </div>
      );
