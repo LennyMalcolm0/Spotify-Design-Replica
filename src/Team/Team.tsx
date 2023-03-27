@@ -80,6 +80,7 @@ const TeamsPage = () => {
                         <i className="fa-solid fa-arrow-up rotate-45 text-black "></i>
                     </div>
                 </div>
+                
                 <div className="flex justify-between my-[100px] md:my-[50px]">
                     <div></div>
                     <div className="flex items-center group cursor-pointer">

@@ -8,9 +8,24 @@ interface Props {
 }
 const Disciplines = ({heading, info, bgShapeSrc, randomShapeSrc, bgColor}: Props) => {
     // useEffect(() => {
-    //     const backgroundColor = bgColor;
+    //     const discipline = document.querySelector(".Discipline") as HTMLElement,
+    //     max1024 = window.matchMedia("(max-width: 1024px)");
+
+    //     discipline.addEventListener("mouseover", () => {
+    //         discipline.classList.add(`bg-${bgColor}`);
+    //     });
+    //     discipline.addEventListener("mouseover", () => {
+    //         discipline.classList.remove(`bg-${bgColor}`);
+    //     });
+    //     function background() {
+    //         if (max1024.matches) {
+    //             discipline.classList.add(`bg-${bgColor}`);
+    //         }
+    //     };
+    //     background();
+        
+    //     window.addEventListener("resize", background)
     // }, []);
-    console.log(bgColor)
 
     return ( 
         <div className="Discipline transition-all duration-300">
