@@ -16,7 +16,7 @@ const TeamsPage = () => {
         <div className="Teams bg-[black] h-full w-screen text-white">
             <NavBar logoUrl="Images\Spotify Logo White.svg" color="white" activeLink="Team" />
 
-            <div className="w-full max-w-[2000px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] relative transition-all duration-300">
+            <div className="w-full max-w-[2000px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] relative ">
                 <div className="absolute top-[30px] sm:top-[10px] left-[50px] md:left-0">
                     <img src="background-shapes/(Tools) Top-sec Red Shape.svg" alt="" className="lg:h-[300px] md:h-[250px] sm:h-[200px] " />
                 </div>
@@ -34,8 +34,11 @@ const TeamsPage = () => {
                         </div>
                     </div>
 
-                    <div className="flex justify-center mt-10">
-                        <ViewMore text="Join the band" textColor1="white" textColor2="black" arrowDirection="down" />
+                    <div className="flex justify-center">
+                        <ViewMore 
+                            actionText="Join the band" textColor1="white" textColor2="black" 
+                            arrowDirection="down" compClass="flex mt-10"
+                        />
                     </div>
                 </div>
 
@@ -53,10 +56,10 @@ const TeamsPage = () => {
                     ))}
                 </div>
 
-                <div className="flex justify-between mt-[60px] sm:mt-[30px] ">
-                    <div></div>
-                    <ViewMore text="View more stories" textColor1="white" textColor2="black" arrowDirection="down" />
-                </div>
+                <ViewMore 
+                    actionText="View more stories" textColor1="white" textColor2="black" 
+                    arrowDirection="down" compClass="flex mt-[60px] sm:mt-[30px]"
+                />
 
                 <div className="text-[30px] md:text-[26px] sm:text-[22px] mt-[100px] md:mt-[50px]">Our Disciplines</div>
                 <div className="relative grid grid-cols-2 sm:grid-cols-1 gap-6 mt-[20px]">

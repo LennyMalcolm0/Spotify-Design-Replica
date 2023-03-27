@@ -14,7 +14,7 @@ const HomePage = () => {
     }
 
     return ( 
-        <div className="Home transition-all duration-300">
+        <div className="Home ">
             <NavBar logoUrl="Images\Spotify Logo Black.svg" color="black" activeLink="Home" />
 
             <div className="Home-container pt-[100px] pb-[50px] bg-[#FFCC00] text-[14px] 2xl:flex flex-col items-center ">
@@ -42,7 +42,7 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                <div className="controls-position3 hidden xl:flex lg:hidden sm:flex ml-[-5px] mt-[60px] sm:mt-[130px] px-[60px] sm:px-[15px] ">
+                <div className="controls-position3 hidden xl:flex lg:hidden sm:flex ml-[-5px] mt-[60px] sm:mt-[200px] px-[60px] sm:px-[15px] ">
                     <div><img src="icons\backward.svg" alt="" /></div>
                     <div className="mx-[20px]"><img src="icons\forward.svg" alt="" /></div>
                     <div><img src="icons\shuffle.svg" alt="" /></div>
@@ -69,12 +69,10 @@ const HomePage = () => {
             </div>
 
             <div className="w-full max-w-[2000px] sm:mt-[30px] mb-[30px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] ">
-                <div className="flex items-center justify-between mt-[50px]">
-                    <div className="text-[32px] sm:text-[24px]">New Releases</div>
-                    <Link to="/stories" className="sm:hidden">
-                        <ViewMore text="View all stories" textColor1="black" textColor2="white" arrowDirection="right" />
-                    </Link>
-                </div>
+                <ViewMore 
+                    h1Text="New Releases" link="/stories" linkClass="sm:hidden" actionText="View all stories" 
+                    textColor1="black" textColor2="white" arrowDirection="right" compClass="flex mt-[50px]"
+                />
 
                 <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-16 md:gap-y-8 mt-[30px]">
                     {homeStories.map((item, index) => (
@@ -83,33 +81,23 @@ const HomePage = () => {
                         </div>
                     ))}
                 </div>
+                
+                <ViewMore 
+                    link="/stories" actionText="View all stories" textColor1="black" textColor2="white" 
+                    arrowDirection="right" compClass="hidden sm:flex mt-[30px] mb-[60px]"
+                />
+                
+                <ViewMore 
+                    h1Text="In the Spotlight" h2Text="Meet the humans who design Spotify" link="/stories" linkClass="sm:hidden" 
+                    actionText="View all in the spotlights" textColor1="black" textColor2="white" arrowDirection="right" compClass="flex my-[50px] sm:my-0 sm:mb-[30px]"
+                />
 
-                <div className="items-center justify-between mt-[30px] mb-[60px] hidden sm:flex">
-                    <div></div>
-                    <Link to="/stories">
-                        <ViewMore text="View all stories" textColor1="black" textColor2="white" arrowDirection="right" />
-                    </Link>
-                </div>
+                <Designers />
 
-                <div className="flex items-center justify-between my-[50px] sm:my-0 sm:mb-[30px]">
-                    <div className="text-[32px] sm:text-[22px] leading-[35px] sm:leading-[25px]">
-                        <div>In the Spotlight</div>
-                        <div className="font-normal">Meet the humans who design Spotify</div>
-                    </div>
-
-                    <Link to="/stories" className="sm:hidden">
-                        <ViewMore text="View all in the spotlights" textColor1="black" textColor2="white" arrowDirection="right" />
-                    </Link>
-                </div>
-
-                <Designers/>
-
-                <div className="items-center justify-between my-[30px] hidden sm:flex">
-                    <div></div>
-                    <Link to="/stories">
-                        <ViewMore text="View all in the spotlights" textColor1="black" textColor2="white" arrowDirection="right" />
-                    </Link>
-                </div>
+                <ViewMore 
+                    link="/stories" actionText="View all in the spotlights" textColor1="black" textColor2="white" 
+                    arrowDirection="right" compClass="my-[30px] hidden sm:flex"
+                />
             </div>
             
             <div className="mt-[80px] sm:mt-0">

@@ -30,7 +30,7 @@ const StoriesComponent = ({imageSrc, theme, listenTheme, heading, info}: Props) 
         <div className="Stories-component">
             {theme ?
                 listenTheme ?
-                    <div className="story-card group h-fit cursor-pointer transition-all duration-200">
+                    <div className="story-card group h-fit cursor-pointer ">
                         <div className="w-full relative">
                             <img src={imageSrc} alt="" className="w-full" />
                             <div className="w-[45px] h-[45px] group-hover:bg-white rounded-full border-2 
@@ -54,7 +54,7 @@ const StoriesComponent = ({imageSrc, theme, listenTheme, heading, info}: Props) 
                         <div className="w-full mt-2 text-[14px] font-normal leading-5">{info}</div>
                     </div>
             :
-                <div className="story-card group h-fit cursor-pointer transition-all duration-200">
+                <div className="story-card group h-fit cursor-pointer ">
                     <div className="w-full relative">
                         <img src={imageSrc} alt="" className="w-full" />
                         <div className="w-[45px] h-[45px] group-hover:bg-white rounded-full border-2 

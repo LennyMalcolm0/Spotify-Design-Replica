@@ -28,7 +28,7 @@ const Disciplines = ({heading, info, bgShapeSrc, randomShapeSrc, bgColor}: Props
     // }, []);
 
     return ( 
-        <div className="Discipline transition-all duration-300">
+        <div className="Discipline ">
             <div className={`h-[600px] w-full group relative border border-[#3f3f3f] px-[50px] py-[40px] bg-black hover:bg-${bgColor} text-white hover:text-black 
             overflow-hidden cursor-pointer md:bg-${bgColor} md:h-[550px] sm:h-[450px] md:px-[30px] md:py-[20px] `}>
                 <div className="h-full relative flex flex-col justify-between z-[999]">

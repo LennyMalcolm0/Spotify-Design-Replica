@@ -32,10 +32,11 @@ const ListenPage = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="flex justify-between mt-[60px] sm:mt-[30px]">
-                        <div></div>
-                        <ViewMore text="View more stories" textColor1="white" textColor2="black" arrowDirection="down" />
-                    </div>
+                    
+                    <ViewMore 
+                        actionText="View more stories" textColor1="white" textColor2="black" 
+                        arrowDirection="down" compClass="flex mt-[60px] sm:mt-[30px]"
+                    />
                 </div>
                 
                 <Inbox />

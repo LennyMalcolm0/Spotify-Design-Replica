@@ -5,7 +5,7 @@ import Inbox from '../GeneralComponents/Inbox';
 
 const ToolsPage = () => {
     return ( 
-        <div className="Tools bg-[#FEE819] h-full transition-all duration-300">
+        <div className="Tools bg-[#FEE819] h-full ">
             <NavBar logoUrl="Images\Spotify Logo Black.svg" color="black" activeLink="Tools" />
 
             <div className="top-bg-shape absolute left-[-20px] sm:left-0">

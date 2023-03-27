@@ -27,10 +27,10 @@ const StoriesPage = () => {
                         ))}
                     </div>
 
-                    <div className="flex justify-between mt-[60px] mb-[100px] md:my-[30px]">
-                        <div></div>
-                        <ViewMore text="View more stories" textColor1="black" textColor2="white" arrowDirection="down" />
-                    </div>
+                    <ViewMore 
+                        actionText="View more stories" textColor1="black" textColor2="white" 
+                        arrowDirection="down" compClass="flex mt-[60px] mb-[100px] md:my-[30px]"
+                    />
                 </div>
                 
                 <Inbox />
