@@ -15,12 +15,24 @@ const Designers = () => {
             carouselMouse.style.top = `${y}px`;
 		});
 
-        const profiles = document.querySelectorAll(".profile");
+        const profiles = document.querySelectorAll(".profile"),
+        max1024 = window.matchMedia("(max-width: 1024px)"),
+        max600 = window.matchMedia("(max-width: 600px)");
         // Adding space between profiles
-        for (let i = 1; i < profiles.length; i++) {
-            const profile = profiles[i] as HTMLElement;
-            profile.style.marginLeft = "150px";
-        };
+        function carouselSpacing() {
+            for (let i = 1; i < profiles.length; i++) {
+                const profile = profiles[i] as HTMLElement;
+                if (max600.matches) {
+                    profile.style.marginLeft = "50px";
+                } else if (max1024.matches) {
+                    profile.style.marginLeft = "100px";
+                } else {
+                    profile.style.marginLeft = "150px";
+                }
+            };
+        }
+        carouselSpacing();
+        window.addEventListener("resize", carouselSpacing);
 
         for (let i = 0; i < profiles.length; i+=3) {
             const profile = profiles[i].firstElementChild as HTMLElement;
@@ -53,7 +65,7 @@ const Designers = () => {
                         <div className="relative cursor-pointer">
                             <img src={detail.imageSrc} alt="" className="w-full h-full object-cover peer" draggable="false" />
 
-                            <div className="bio hidden peer-hover:flex hover:flex absolute left-[15px] bottom-[15px] p-[25px] bg-black text-white font-normal flex-col justify-between ">
+                            <div className="bio hidden peer-hover:flex hover:flex md:peer-hover:hidden md:hover:hidden absolute left-[15px] bottom-[15px] p-[25px] bg-black text-white font-normal flex-col justify-between ">
                                 <div className="text-[24px] leading-[28px]">{`"${detail.bio}"`}</div>
                                 <div className="text-[16px] underline opacity-0">READ MORE</div>
                             </div>
@@ -64,8 +76,8 @@ const Designers = () => {
                             </div>
                         </div>
 
-                        <div className="text-[24px] leading-[28px] mt-[5px]">
-                            <div>{detail.name}</div>
+                        <div className="text-[24px] leading-[28px] md:text-[20px] md:leading-[21px] sm:text-[18px] smm:leading-[19px] mt-[5px]">
+                            <div className="sm:font-semibold">{detail.name}</div>
                             <div className="font-normal">{detail.role}</div>
                         </div>
                     </div>

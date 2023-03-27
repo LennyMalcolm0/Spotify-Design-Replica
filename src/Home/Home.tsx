@@ -75,7 +75,7 @@ const HomePage = () => {
                     ))}
                 </div>
 
-                <div className="items-center justify-between my-[30px] hidden sm:flex">
+                <div className="items-center justify-between mt-[30px] mb-[60px] hidden sm:flex">
                     <div></div>
                     <Link to="/stories">
                         <ViewMore text="View all stories" textColor1="black" textColor2="white" arrowDirection="right" />

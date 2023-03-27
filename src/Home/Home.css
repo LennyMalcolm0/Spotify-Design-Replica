@@ -253,7 +253,7 @@
 }
 
 .position2-profile {
-    height: 450px;
+    height: 430px;
     width: 350px;
 }
 .position2-bio {
@@ -268,4 +268,38 @@
 .position3-bio {
     height: 350px;
     width: 300px;
+}
+
+@media screen and (max-width: 1024px) {
+    .position1-profile {
+        height: 480px;
+        width: 360px;
+    }
+    
+    .position2-profile {
+        height: 300px;
+        width: 260px;
+    }
+    
+    .position3-profile {
+        height: 400px;
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .position1-profile {
+        height: 350px;
+        width: 280px;
+    }
+    
+    .position2-profile {
+        height: 200px;
+        width: 180px;
+    }
+    
+    .position3-profile {
+        height: 300px;
+        width: 250px;
+    }
 }
