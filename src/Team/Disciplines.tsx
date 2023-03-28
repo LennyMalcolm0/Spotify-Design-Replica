@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 interface Props {
     heading: string,
     info: string,
@@ -8,25 +7,6 @@ interface Props {
     bgColor1024: string,
 }
 const Disciplines = ({heading, info, bgShapeSrc, randomShapeSrc, bgColorHover, bgColor1024}: Props) => {
-    // useEffect(() => {
-    //     const discipline = document.querySelector(".Discipline") as HTMLElement,
-    //     max1024 = window.matchMedia("(max-width: 1024px)");
-
-    //     discipline.addEventListener("mouseover", () => {
-    //         discipline.classList.add(`${bgColor}`);
-    //     });
-    //     discipline.addEventListener("mouseover", () => {
-    //         discipline.classList.remove(`${bgColor}`);
-    //     });
-    //     function background() {
-    //         if (max1024.matches) {
-    //             discipline.classList.add(`${bgColor}`);
-    //         }
-    //     };
-    //     background();
-        
-    //     window.addEventListener("resize", background)
-    // }, []);
         
     return ( 
         <div className="Discipline ">
@@ -39,7 +19,7 @@ const Disciplines = ({heading, info, bgShapeSrc, randomShapeSrc, bgColorHover, b
                     </div>
                     <div className="flex items-center group text-[14px] cursor-pointer">
                         <div className="mb-[5px] uppercase group-hover:underline">VIEW OPPURTUNITIES<i className="fa-sharp fa-regular fa-arrow-up-right"></i></div>
-                        <div className="w-7 h-7 ml-[5px] rounded-full border-[1px] border-white border-solid
+                        <div className="w-7 h-7 ml-[7px] rounded-full border-[1px] border-white border-solid
                             group-hover:bg-black group-hover:border-black flex items-center justify-center md:border-black">
                             <i className="fa-solid fa-arrow-right text-[14px] text-white -rotate-45 md:text-black group-hover:text-white "></i>
                         </div>

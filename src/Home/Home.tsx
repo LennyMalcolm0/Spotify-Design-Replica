@@ -1,6 +1,6 @@
 import './Home.css';
 import { Link } from 'react-router-dom';
-import { stories } from '../AppData/Data';
+import { stories, toolStories } from '../AppData/Data';
 import NavBar from '../GeneralComponents/NavBar';
 import ViewMore from '../GeneralComponents/ViewMore';
 import Designers from './designersCarousel';
@@ -11,6 +11,11 @@ const HomePage = () => {
     const homeStories = [];
     for (let i = 0; i < 4; i++) {
         homeStories.push(stories[i]);
+    }
+
+    const homeToolStories = [];
+    for (let i = 0; i < 2; i++) {
+        homeToolStories.push(toolStories[i]);
     }
 
     return ( 
@@ -102,6 +107,57 @@ const HomePage = () => {
             
             <div className="mt-[80px] sm:mt-0">
                 <Inbox />
+            </div>
+
+            <div className="w-full max-w-[2000px] sm:mt-[30px] mb-[30px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] ">
+                <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-16 md:gap-y-8 mt-[60px] md:mt-[30px]">
+                    <div className="col-span-2 grid grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-10 sm:gap-y-8">
+                        <div className="col-span-2 sm:col-span-1">
+                            <ViewMore 
+                                h1Text="Tools" h2Text="Our day-to-day resources" link="/tools" linkClass="sm:hidden" 
+                                actionText="View all tools" textColor1="black" textColor2="white" arrowDirection="right" compClass="flex"
+                            />
+                        </div>
+                        
+                        {homeToolStories.map((item, index) => (
+                            <div key={index}>
+                                <StoriesComponent imageSrc={item.imageSrc} theme={item.theme} heading={item.heading} info={item.info} />
+                            </div>
+                        ))}
+
+                        <ViewMore 
+                            link="/tools" actionText="View all tools" textColor1="black" textColor2="white" 
+                            arrowDirection="right" compClass="hidden sm:flex"
+                        />
+                    </div>
+
+                    <div className="col-span-2">
+                        <div className="w-[85%] mx-auto md:w-full">
+                            <ViewMore 
+                                h1Text="Jobs" h2Text="Open roles at Spotify Design" link="/team" linkClass="sm:hidden" 
+                                actionText="View team" textColor1="black" textColor2="white" arrowDirection="right" compClass="flex sm:mb-[20px]"
+                            />
+
+                            <div className="w-full group flex justify-between mt-[40px] md:mt-[20px] cursor-pointer">
+                                <div>
+                                    <div className="flex items-center">
+                                        <div className="w-2 h-2 rounded-full bg-black mr-1"></div>
+                                        <div className="text-[14px]">MIAMI</div>
+                                    </div>
+                                    <div className="text-[24px] md:text-[20px] sm:text-[18px] group-hover:underline">Design Manager - Editorial, LatAm</div>
+                                </div>
+                                <div className="w-7 h-7 ml-[5px] rounded-full flex items-center justify-center bg-black opacity-0 group-hover:opacity-100 md:hidden">
+                                    <i className="fa-solid fa-arrow-up rotate-45 text-white "></i>
+                                </div>
+                            </div>
+
+                            <ViewMore 
+                                link="/teams" actionText="View team" textColor1="black" textColor2="white" 
+                                arrowDirection="right" compClass="hidden sm:flex mt-[30px]"
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
      );
