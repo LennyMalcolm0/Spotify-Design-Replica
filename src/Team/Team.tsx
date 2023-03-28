@@ -65,7 +65,11 @@ const TeamsPage = () => {
                 <div className="relative grid grid-cols-2 sm:grid-cols-1 gap-6 mt-[20px]">
                     {disciplines.map((data, index) => (
                         <div key={index}>
-                            <Disciplines heading={data.heading} info={data.info} bgShapeSrc={data.bgShapeSrc} randomShapeSrc={data.randomShapeSrc} bgColor={data.bgColor} />
+                            <Disciplines 
+                                heading={data.heading} info={data.info} bgShapeSrc={data.bgShapeSrc} 
+                                randomShapeSrc={data.randomShapeSrc} bgColorHover={data.bgColorHover} 
+                                bgColor1024={data.bgColor1024}
+                            />
                         </div>
                     ))}
                 </div>

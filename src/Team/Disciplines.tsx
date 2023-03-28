@@ -4,33 +4,34 @@ interface Props {
     info: string,
     bgShapeSrc: string,
     randomShapeSrc: string,
-    bgColor: string,
+    bgColorHover: string,
+    bgColor1024: string,
 }
-const Disciplines = ({heading, info, bgShapeSrc, randomShapeSrc, bgColor}: Props) => {
+const Disciplines = ({heading, info, bgShapeSrc, randomShapeSrc, bgColorHover, bgColor1024}: Props) => {
     // useEffect(() => {
     //     const discipline = document.querySelector(".Discipline") as HTMLElement,
     //     max1024 = window.matchMedia("(max-width: 1024px)");
 
     //     discipline.addEventListener("mouseover", () => {
-    //         discipline.classList.add(`bg-${bgColor}`);
+    //         discipline.classList.add(`${bgColor}`);
     //     });
     //     discipline.addEventListener("mouseover", () => {
-    //         discipline.classList.remove(`bg-${bgColor}`);
+    //         discipline.classList.remove(`${bgColor}`);
     //     });
     //     function background() {
     //         if (max1024.matches) {
-    //             discipline.classList.add(`bg-${bgColor}`);
+    //             discipline.classList.add(`${bgColor}`);
     //         }
     //     };
     //     background();
         
     //     window.addEventListener("resize", background)
     // }, []);
-
+        
     return ( 
         <div className="Discipline ">
-            <div className={`h-[600px] w-full group relative border border-[#3f3f3f] px-[50px] py-[40px] bg-black hover:bg-${bgColor} text-white hover:text-black 
-            overflow-hidden cursor-pointer md:bg-${bgColor} md:h-[550px] sm:h-[450px] md:px-[30px] md:py-[20px] `}>
+            <div className={`h-[600px] w-full group relative border border-[#3f3f3f] px-[50px] py-[40px] ${bgColorHover} text-white hover:text-black 
+            overflow-hidden cursor-pointer ${bgColor1024} md:text-black md:h-[550px] sm:h-[450px] md:px-[30px] md:py-[20px] `}>
                 <div className="h-full relative flex flex-col justify-between z-[999]">
                     <div>
                         <div className="text-[52px] leading-[55px] md:text-[38px] md:leading-[42px] ">{heading}</div>
@@ -39,8 +40,8 @@ const Disciplines = ({heading, info, bgShapeSrc, randomShapeSrc, bgColor}: Props
                     <div className="flex items-center group text-[14px] cursor-pointer">
                         <div className="mb-[5px] uppercase group-hover:underline">VIEW OPPURTUNITIES<i className="fa-sharp fa-regular fa-arrow-up-right"></i></div>
                         <div className="w-7 h-7 ml-[5px] rounded-full border-[1px] border-white border-solid
-                            group-hover:bg-black group-hover:border-black flex items-center justify-center">
-                            <i className="fa-solid fa-arrow-right text-[14px] text-white -rotate-45 "></i>
+                            group-hover:bg-black group-hover:border-black flex items-center justify-center md:border-black">
+                            <i className="fa-solid fa-arrow-right text-[14px] text-white -rotate-45 md:text-black group-hover:text-white "></i>
                         </div>
                     </div>
                 </div>
