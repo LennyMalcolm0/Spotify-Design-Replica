@@ -5,6 +5,7 @@ import { stories } from '../AppData/Data';
 import ViewMore from '../GeneralComponents/ViewMore';
 import Inbox from '../GeneralComponents/Inbox';
 import StoriesComponent from '../GeneralComponents/StoriesComp';
+import Footer from '../GeneralComponents/Footer';
 
 const StoriesPage = () => {
     return ( 
@@ -35,6 +36,7 @@ const StoriesPage = () => {
                 
                 <Inbox />
                 
+                <Footer imgSrc="Images\Spotify Logo Black.svg" textColor="black" arrowHoverColor="white" />
             </div>
         </div>
      );

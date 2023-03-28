@@ -4,6 +4,7 @@ import { musicGenre, listenStories } from '../AppData/Data';
 import ViewMore from '../GeneralComponents/ViewMore';
 import Inbox from '../GeneralComponents/Inbox';
 import StoriesComponent from '../GeneralComponents/StoriesComp';
+import Footer from '../GeneralComponents/Footer';
 
 const ListenPage = () => {
 
@@ -40,6 +41,8 @@ const ListenPage = () => {
                 </div>
                 
                 <Inbox />
+
+                <Footer imgSrc="Images\Spotify Logo White.svg" textColor="white" arrowHoverColor="black" />
             </div>
         </div>
      );

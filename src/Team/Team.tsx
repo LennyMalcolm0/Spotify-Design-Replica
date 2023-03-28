@@ -4,6 +4,7 @@ import { stories } from '../AppData/Data';
 import Disciplines from './Disciplines';
 import { disciplines } from '../AppData/Data';
 import Inbox from '../GeneralComponents/Inbox';
+import Footer from '../GeneralComponents/Footer';
 
 const TeamsPage = () => {
     const teamStories = [];
@@ -100,6 +101,8 @@ const TeamsPage = () => {
             </div>
             
             <Inbox />
+
+            <Footer imgSrc="Images\Spotify Logo White.svg" textColor="white" arrowHoverColor="black" />
         </div>
      );
 }

@@ -6,6 +6,7 @@ import ViewMore from '../GeneralComponents/ViewMore';
 import Designers from './designersCarousel';
 import Inbox from '../GeneralComponents/Inbox';
 import StoriesComponent from '../GeneralComponents/StoriesComp';
+import Footer from '../GeneralComponents/Footer';
 
 const HomePage = () => {
     const homeStories = [];
@@ -63,7 +64,7 @@ const HomePage = () => {
                         <div className="end">15</div>
                     </div>
 
-                    <div className="scroll-down group flex items-center cursor-pointer">
+                    <div className="scroll-down group flex items-center cursor-pointer text-[14px]">
                         <span>SCROLL DOWN</span>
                         <div className="h-[60px] sm:h-[45px] w-[60px] sm:w-[45px] ml-[10px] border border-[#9c9797] border-opacity-40 
                         rounded-full flex items-center justify-center group-hover:bg-black ">
@@ -118,7 +119,7 @@ const HomePage = () => {
                                 actionText="View all tools" textColor1="black" textColor2="white" arrowDirection="right" compClass="flex"
                             />
                         </div>
-                        
+
                         {homeToolStories.map((item, index) => (
                             <div key={index}>
                                 <StoriesComponent imageSrc={item.imageSrc} theme={item.theme} heading={item.heading} info={item.info} />
@@ -159,6 +160,8 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
+
+            <Footer imgSrc="Images\Spotify Logo Black.svg" textColor="black" arrowHoverColor="white" />
         </div>
      );
 }

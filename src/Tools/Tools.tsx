@@ -2,6 +2,7 @@ import NavBar from '../GeneralComponents/NavBar';
 import { toolStories } from '../AppData/Data';
 import StoriesComponent from '../GeneralComponents/StoriesComp';
 import Inbox from '../GeneralComponents/Inbox';
+import Footer from '../GeneralComponents/Footer';
 
 const ToolsPage = () => {
     return ( 
@@ -60,6 +61,8 @@ const ToolsPage = () => {
             </div>
 
             <Inbox />
+
+            <Footer imgSrc="Images\Spotify Logo Black.svg" textColor="black" arrowHoverColor="white" />
         </div>
      );
 }
