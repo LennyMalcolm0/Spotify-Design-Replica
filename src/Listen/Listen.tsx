@@ -15,7 +15,6 @@ const ListenPage = () => {
             <div className="absolute inset-0 bg-black h-fit w-full">
                 <PickCategory pageTextColor="text-white" />
 
-                
                 <div className="w-full max-w-[2000px] mx-auto px-[60px] md:px-[30px] sm:px-[15px]">
                     <div className="w-full text-center text-[32px] md:text-[28px] sm:text-[24px] text-white mt-[60px] sm:mt-[20px]">Playlists, podcasts, and other audio goodness from our team.</div>
                     <div className="w-full overflow-hidden">
@@ -42,7 +41,7 @@ const ListenPage = () => {
                 
                 <Inbox />
 
-                <Footer imgSrc="Images\Spotify Logo White.svg" textColor="white" arrowHoverColor="black" />
+                <Footer logoSrc="Images\Spotify Logo White.svg" textColor="white" arrowHoverColor="black" />
             </div>
         </div>
      );

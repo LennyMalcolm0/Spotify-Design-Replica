@@ -12,11 +12,11 @@ const StoriesPage = () => {
         <div className="Stories">
             <NavBar logoUrl="Images\Spotify Logo Black.svg" color="black" activeLink="Stories" />
 
-            <div className="top-bg-shape absolute left-[-5vw] sm:left-0">
-                <img src="background-shapes\stories-top-bg.svg" alt="" className="" draggable="false" />
-            </div>
-
             <div className="absolute inset-0 h-fit w-full">
+                <div className="top-bg-shape absolute left-[-5vw] sm:left-0 2xl:inset-0">
+                    <img src="background-shapes\stories-top-bg.svg" alt="" className="" draggable="false" />
+                </div>
+
                 <PickCategory pageTextColor="text-black" />
 
                 <div className="w-full max-w-[2000px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] ">
@@ -36,7 +36,7 @@ const StoriesPage = () => {
                 
                 <Inbox />
                 
-                <Footer imgSrc="Images\Spotify Logo Black.svg" textColor="black" arrowHoverColor="white" />
+                <Footer logoSrc="Images\Spotify Logo Black.svg" textColor="black" arrowHoverColor="white" bgImageSrc="background-shapes\stories-bottom-bg.svg" />
             </div>
         </div>
      );

@@ -1,15 +1,16 @@
 interface Props {
-    imgSrc: string;
+    logoSrc: string;
     textColor: string;
     arrowHoverColor: string;
+    bgImageSrc?: string;
 }
-const Footer = ({imgSrc, textColor, arrowHoverColor}: Props) => {
+const Footer = ({logoSrc, textColor, arrowHoverColor, bgImageSrc}: Props) => {
     return ( 
         <div className={`Footer text-${textColor}`}>
-            <div className="relative w-full max-w-[2000px] h-[650px] md:h-[500px] sm:h-[550px] mx-auto py-[40px] 
+            <div className=" w-full max-w-[2000px] h-[650px] md:h-[500px] sm:h-[550px] mx-auto py-[40px] 
             px-[60px] md:px-[30px] sm:px-[15px] flex flex-col justify-between ">
-                <div className="flex justify-between mt-[20px] md:block text-[24px] md:text-[20px] sm:text-[18px] font-normal sm:font-semibold">
-                    <img src={imgSrc} alt="" className="h-[45px] md:h-[38px] sm:h-[32px] cursor-pointer" />
+                <div className="z-[9999] flex justify-between mt-[20px] md:block text-[24px] md:text-[20px] sm:text-[18px] font-normal sm:font-semibold">
+                    <img src={logoSrc} alt="" className="h-[45px] md:h-[38px] sm:h-[32px] cursor-pointer" />
 
                     <div className="w-[65%] md:w-full flex justify-between whitespace-nowrap md:mt-[30px] ">
                         <div className="">
@@ -53,7 +54,7 @@ const Footer = ({imgSrc, textColor, arrowHoverColor}: Props) => {
                     </div>
                 </div>
 
-                <div className="flex items-center justify-between whitespace-nowrap ">
+                <div className="z-[9999] flex items-center justify-between whitespace-nowrap ">
                     <div className="flex items-center md:block text-[18px] md:text-[16px] font-semibold ">
                         <div className="mr-5">© 2020 Spotify AB</div>
                         <div className="flex flex-wrap">
@@ -72,6 +73,14 @@ const Footer = ({imgSrc, textColor, arrowHoverColor}: Props) => {
                         </div>
                     </div>
                 </div>
+
+                {bgImageSrc ? 
+                    <div className="absolute bottom-0 right-0">
+                        <img src={bgImageSrc} alt="" />
+                    </div> 
+                    :
+                    <></>
+                }
             </div>
         </div>
      );
