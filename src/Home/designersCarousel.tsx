@@ -5,15 +5,16 @@ import { designersProfile } from '../AppData/Data';
 const Designers = () => {
     useEffect(() => {
         const carouselMouse = document.querySelector(".carousel-mouse") as HTMLElement;
-        document.addEventListener("mousemove", function(event) {
-			// Get the coordinates of the mouse pointer
-			let x = event.clientX;
-			let y = event.clientY;
-            // console.log(x + "  " + y);
+        // const area = document.querySelector(".carousel") as HTMLElement;
+        // area.addEventListener("mousemove", function(event) {
+		// 	// Get the coordinates of the mouse pointer
+		// 	let x = event.pageX;
+		// 	let y = event.pageY;
+        //     // console.log(x + "  " + y);
 
-            carouselMouse.style.left = `${x}px`;
-            carouselMouse.style.top = `${y}px`;
-		});
+        //     carouselMouse.style.left = `${x}px`;
+        //     carouselMouse.style.top = `${y}px`;
+		// });
 
         const profiles = document.querySelectorAll(".profile"),
         max1024 = window.matchMedia("(max-width: 1024px)"),
@@ -34,32 +35,56 @@ const Designers = () => {
         carouselSpacing();
         window.addEventListener("resize", carouselSpacing);
 
-        for (let i = 0; i < profiles.length; i+=3) {
-            const profile = profiles[i].firstElementChild as HTMLElement;
-            profile.classList.add("position1-profile")
-
-            const profileBio = profiles[i].firstElementChild?.children[1] as HTMLElement;
-            profileBio.classList.add("position1-bio")
+        function imageClass() {
+            for (let i = 0; i < profiles.length; i+=3) {
+                const profile = profiles[i].firstElementChild as HTMLElement;
+                profile.classList.add("position1-profile")
+    
+                const profileBio = profiles[i].firstElementChild?.children[1] as HTMLElement;
+                profileBio.classList.add("position1-bio")
+            }
+            for (let i = 1; i < profiles.length; i+=3) {
+                const profile = profiles[i].firstElementChild as HTMLElement;
+                profile.classList.add("position2-profile")
+    
+                const profileBio = profiles[i].firstElementChild?.children[1] as HTMLElement;
+                profileBio.classList.add("position2-bio")
+            }
+            for (let i = 2; i < profiles.length; i+=3) {
+                const profile = profiles[i].firstElementChild as HTMLElement;
+                profile.classList.add("position3-profile");
+    
+                const profileBio = profiles[i].firstElementChild?.children[1] as HTMLElement;
+                profileBio.classList.add("position3-bio")
+            }
         }
-        for (let i = 1; i < profiles.length; i+=3) {
-            const profile = profiles[i].firstElementChild as HTMLElement;
-            profile.classList.add("position2-profile")
+        imageClass();
 
-            const profileBio = profiles[i].firstElementChild?.children[1] as HTMLElement;
-            profileBio.classList.add("position2-bio")
+        const carousel = document.querySelector(".carousel") as HTMLElement;
+        let mouseDown = false, prevPageX: any, prevScrollLeft: any, positionDiff;
+        
+        function dragStart(event: any) {
+            mouseDown = true;
+            prevPageX = event.pageX;
+            prevScrollLeft = carousel.scrollLeft;
         }
-        for (let i = 2; i < profiles.length; i+=3) {
-            const profile = profiles[i].firstElementChild as HTMLElement;
-            profile.classList.add("position3-profile");
-
-            const profileBio = profiles[i].firstElementChild?.children[1] as HTMLElement;
-            profileBio.classList.add("position3-bio")
+        function dragStop() {
+            mouseDown = false;
         }
+        function dragging(event: any) {
+            if (!mouseDown) return;
+            event.preventDefault();
+            positionDiff = event.pageX - prevPageX;
+            carousel.scrollLeft = prevScrollLeft - positionDiff;
+        }
+        carousel.addEventListener("mousemove", dragging);
+        carousel.addEventListener("mousedown", dragStart);
+        carousel.addEventListener("mouseup", dragStop);
     }, [])
 
     return ( 
         <div className="Designers w-full group relative">
-            <div className="w-full flex items-center cursor-grab select-none ">
+            <div className="carousel w-full flex items-center cursor-grab select-none overflow-hidden ">
                 {designersProfile.map((detail, index) => (
                     <div className="profile text-black" key={index}>
                         <div className="relative cursor-pointer">
@@ -89,7 +114,7 @@ const Designers = () => {
                     <i className="fa-solid fa-play rotate-[180deg]"></i>
                     <i className="fa-solid fa-play"></i>
                 </div>
-            </div>*/}
+            </div> */}
         </div>
      );
 }

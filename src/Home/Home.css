@@ -94,3 +94,7 @@
         width: 250px;
     }
 }
+
+/* .carousel::-webkit-scrollbar {
+    display: none;
+} */
