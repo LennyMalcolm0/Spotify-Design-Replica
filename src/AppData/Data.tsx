@@ -366,13 +366,6 @@ export const designersProfile = [
         bio: "I chose to be a designer because it allows me to experiment and keep on iterating.",
         role: "Summer Intern Product Designer"
     },
-    {
-        imageSrc: "Images/Designers/Ryan Smith.svg",
-        city: "Stockholm",
-        name: "Ryan Smith",
-        bio: "For me, being a Product Designer is the best way to use those muscles of curiosity and creativity.",
-        role: "Senior Product Designer"
-    },
 ]
 
 export const disciplines = [

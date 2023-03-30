@@ -16,25 +16,7 @@ const Designers = () => {
         //     carouselMouse.style.top = `${y}px`;
 		// });
 
-        const profiles = document.querySelectorAll(".profile"),
-        max1024 = window.matchMedia("(max-width: 1024px)"),
-        max600 = window.matchMedia("(max-width: 600px)");
-        // Adding space between profiles
-        function carouselSpacing() {
-            for (let i = 1; i < profiles.length; i++) {
-                const profile = profiles[i] as HTMLElement;
-                if (max600.matches) {
-                    profile.style.marginLeft = "50px";
-                } else if (max1024.matches) {
-                    profile.style.marginLeft = "100px";
-                } else {
-                    profile.style.marginLeft = "150px";
-                }
-            };
-        }
-        carouselSpacing();
-        window.addEventListener("resize", carouselSpacing);
-
+        const profiles = document.querySelectorAll(".profile");
         function imageClass() {
             for (let i = 0; i < profiles.length; i+=3) {
                 const profile = profiles[i].firstElementChild as HTMLElement;
@@ -91,9 +73,9 @@ const Designers = () => {
 
     return ( 
         <div className="Designers w-full group relative">
-            <div className="carousel w-screen flex items-center cursor-grab select-none overflow-hidden ">
+            <div className="carousel w-screen flex items-center cursor-grab select-none overflow-hidden overflow-x-scroll ">
                 {designersProfile.map((detail, index) => (
-                    <div className="profile text-black" key={index}>
+                    <div className="profile text-black mr-[150px] md:mr-[100px] sm:mr-[50px] " key={index}>
                         <div className="relative cursor-pointer">
                             <img src={detail.imageSrc} alt="" className="w-full h-full object-cover peer" draggable="false" />
 
