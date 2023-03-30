@@ -12,7 +12,7 @@ const ListenPage = () => {
         <div className="Listen">
             <NavBar logoUrl="Images\Spotify Logo White.svg" color="white" activeLink="Listen" />
 
-            <div className="absolute inset-0 bg-black h-fit w-full">
+            <div className="absolute inset-0 bg-black h-fit w-screen overflow-hidden">
                 <PickCategory pageTextColor="text-white" />
 
                 <div className="w-full max-w-[2000px] mx-auto px-[60px] md:px-[30px] sm:px-[15px]">

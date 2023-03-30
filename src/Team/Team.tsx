@@ -17,7 +17,7 @@ const TeamsPage = () => {
         <div className="Teams h-full w-screen text-white">
             <NavBar logoUrl="Images\Spotify Logo White.svg" color="white" activeLink="Team" />
 
-            <div className="absolute inset-0 h-fit w-full bg-[black]">
+            <div className="absolute inset-0 h-fit w-screen overflow-hidden bg-[black]">
                 <div className="w-full max-w-[2000px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] relative ">
                     <div className="absolute top-[30px] sm:top-[10px] left-[50px] md:left-0">
                         <img src="background-shapes/(Tools) Top-sec Red Shape.svg" alt="" className="lg:h-[300px] md:h-[250px] sm:h-[200px] " />

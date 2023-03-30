@@ -63,18 +63,25 @@ const Designers = () => {
         const carousel = document.querySelector(".carousel") as HTMLElement;
         let mouseDown = false, prevPageX: any, prevScrollLeft: any, positionDiff;
         
-        function dragStart(event: any) {
+        function dragStart(e: any) { 
             mouseDown = true;
-            prevPageX = event.pageX;
+            prevPageX = e.pageX;
             prevScrollLeft = carousel.scrollLeft;
         }
         function dragStop() {
             mouseDown = false;
         }
-        function dragging(event: any) {
+        document.addEventListener("mousemove", (e: any) => {
+            let outside = document.querySelector(".Designers");
+
+            if (!outside?.contains(e.target)) {
+                mouseDown = false;
+            };
+        })
+        function dragging(e: any) {
             if (!mouseDown) return;
-            event.preventDefault();
-            positionDiff = event.pageX - prevPageX;
+            e.preventDefault();
+            positionDiff = e.pageX - prevPageX;
             carousel.scrollLeft = prevScrollLeft - positionDiff;
         }
         carousel.addEventListener("mousemove", dragging);
@@ -84,7 +91,7 @@ const Designers = () => {
 
     return ( 
         <div className="Designers w-full group relative">
-            <div className="carousel w-full flex items-center cursor-grab select-none overflow-hidden ">
+            <div className="carousel w-screen flex items-center cursor-grab select-none overflow-hidden ">
                 {designersProfile.map((detail, index) => (
                     <div className="profile text-black" key={index}>
                         <div className="relative cursor-pointer">

@@ -9,7 +9,7 @@ const ToolsPage = () => {
         <div className="Tools h-full ">
             <NavBar logoUrl="Images\Spotify Logo Black.svg" color="black" activeLink="Tools" />
 
-            <div className="absolute inset-0 h-fit w-full bg-[#FEE819]">
+            <div className="absolute inset-0 h-fit w-screen overflow-hidden bg-[#FEE819]">
                 <div className="top-bg-shape absolute left-[-20px] sm:left-0">
                     <img src="background-shapes\Tools-top-bg.svg" alt="" className="h-full" draggable="false" />
                 </div>

@@ -20,10 +20,10 @@ const HomePage = () => {
     }
 
     return ( 
-        <div className="Home ">
+        <div className="Home">
             <NavBar logoUrl="Images\Spotify Logo Black.svg" color="black" activeLink="Home" />
 
-            <div className="absolute inset-0 h-fit w-full">
+            <div className="absolute inset-0 h-fit w-screen overflow-hidden">
                 <div className="Home-container pt-[100px] pb-[50px] bg-[#FFCC00] text-[14px] 2xl:flex flex-col items-center ">
                     <div className="random-stories 2xl:w-[1800px] px-[50px] md:px-[30px] sm:px-[15px] flex flex-row-reverse items-center justify-around lg:block ">
                         <div className="story-images flex items-center">
