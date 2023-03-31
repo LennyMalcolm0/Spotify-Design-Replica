@@ -2,7 +2,11 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import './Components.css';
 
-const PickCategory = ({ pageTextColor }: { pageTextColor: string }) => { 
+interface Props {
+    textColor: string;
+    bgColor: string;
+}
+const PickCategory = ({textColor, bgColor }: Props) => { 
     useEffect(() => {
         const openCategory = document.querySelector(".open-category") as HTMLElement,
         closeCategory = document.querySelector(".close-category") as HTMLElement,
@@ -36,7 +40,7 @@ const PickCategory = ({ pageTextColor }: { pageTextColor: string }) => {
     }, []);
 
     return ( 
-        <div className={`Pick-category relative ${pageTextColor}`}>
+        <div className={`Pick-category relative text-${textColor}`}>
             <div className="w-full">
                 <div className="flex items-center justify-center mt-[150px] text-[32px] md:text-[28px] sm:text-[24px] font-normal">
                     <div className="open-category flex cursor-pointer">
@@ -45,17 +49,18 @@ const PickCategory = ({ pageTextColor }: { pageTextColor: string }) => {
                     </div>
                 </div>
                 
-                <div className="hidden category-popup w-full h-full fixed top-0 md:bottom-0 text-black z-[999] opacity-100">
-                    <div className="popup-background w-full h-full bg-[#838282] opacity-20"></div>
-                    <div className="category-content h-[450px] md:h-[550px] w-screen absolute top-0 left-0 right-0 md:bottom-0 bg-white flex items-center justify-center z-[999] ">
+                <div className={`hidden category-popup w-full h-full fixed top-0 md:bottom-0 text-${textColor} z-[999] sm:z-[99999999] opacity-100`}>
+                    <div className="popup-background w-full h-full bg-[#838282] opacity-30"></div>
+                    <div className={`category-content h-[450px] md:h-[550px] sm:h-[500px] w-screen absolute top-0 left-0 right-0 
+                    md:bottom-0 bg-${bgColor} flex items-center justify-center z-[999] `}>
                         <div className="w-[800px] mx-auto">
-                            <div className="flex items-center justify-center text-[32px] md:text-[28px] sm:text-[24px] font-normal mb-[10px]">
+                            <div className="flex items-center justify-center text-[32px] md:text-[26px] sm:text-[24px] font-normal mb-[10px]">
                                 <div className="close-category flex cursor-pointer">
                                     <div>Pick a category</div>
-                                    <i className="fa-solid fa-angle-up text-[25px] md:text-[20px] mt-[15px] sm:mt-[12px] sm ml-2"></i>
+                                    <i className="fa-solid fa-angle-up text-[25px] md:text-[18px] mt-[15px] md:mt-[14px] sm:mt-[12px] sm ml-2"></i>
                                 </div>
                             </div>
-                            <div className="w-full flex flex-wrap items-center justify-around md:flex-col text-[55px] md:text-[42px] sm:text-[32px] ">
+                            <div className="w-full flex flex-wrap items-center justify-around md:flex-col text-[55px] md:text-[40px] sm:text-[32px] ">
                                 <div className="cursor-pointer hover:opacity-[0.5] ">All Stories</div>
                                 <div className="cursor-pointer hover:text-orange-300 ">Design</div>
                                 <div className="cursor-pointer hover:text-blue-500 ">Inspiration</div>

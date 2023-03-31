@@ -66,6 +66,15 @@ const NavBar = ({logoUrl, color, activeLink}: NavProps) => {
             linkTitle.addEventListener("click", closeMenu);
         });
         
+        const allLinks = document.querySelectorAll("a");
+        const pageTop = document.querySelector(".Nav-bar") as HTMLElement;
+        allLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            pageTop.scrollIntoView();
+            appBody.style.overflowY = "scroll";
+          })
+        })
+        
         const min600 = window.matchMedia("(min-width: 600px)");
         window.addEventListener("resize", () => {
             if (min600.matches) {

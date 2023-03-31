@@ -17,7 +17,7 @@ const StoriesPage = () => {
                     <img src="background-shapes\stories-top-bg.svg" alt="" className="" draggable="false" />
                 </div>
 
-                <PickCategory pageTextColor="text-black" />
+                <PickCategory textColor="black" bgColor="white" />
 
                 <div className="w-full max-w-[2000px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] ">
                     <div className="relative grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-16 md:gap-y-8 mt-[100px] md:mt-[50px]">
