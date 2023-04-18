@@ -95,7 +95,7 @@ const NavBar = ({logoUrl, color, activeLink}: NavProps) => {
     }, []);
       
     return (
-        <div className="Nav-bar">
+        <div className="Nav-bar" id="Nav-bar" >
             <div className="w-full absolute top-0 z-[9999]">
                 <div className="nav-bar max-w-[2000px] flex items-center justify-between px-[60px] md:px-[30px] sm:px-[20px] mt-[30px] sm:mt-[20px] 2xl:mx-auto">
                     <Link to="/"><img src={logoUrl} alt="" className="h-[35px] cursor-pointer" /></Link>

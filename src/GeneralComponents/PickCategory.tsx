@@ -5,6 +5,7 @@ import './Components.css';
 interface Props {
     textColor: string;
     bgColor: string;
+    
 }
 const PickCategory = ({textColor, bgColor }: Props) => { 
     useEffect(() => {
@@ -72,7 +73,7 @@ const PickCategory = ({textColor, bgColor }: Props) => {
                     </div>
                 </div>
 
-                <div className="whitespace-nowrap text-[152px] md:text-[90px] sm:text-[60px] overflow-hidden ml-[20%] select-none">
+                <div className="whitespace-nowrap text-[152px] md:text-[90px] sm:text-[60px] ml-[50%] translate-x-[-350px] select-none">
                     <span className="category cursor-pointer">All Stories</span>
                     <span className="category cursor-pointer ml-[50px] opacity-20">Design</span>
                     <span className="category cursor-pointer ml-[50px] opacity-20">Inspiration</span>

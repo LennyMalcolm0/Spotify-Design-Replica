@@ -6,8 +6,13 @@ import ViewMore from '../GeneralComponents/ViewMore';
 import Inbox from '../GeneralComponents/Inbox';
 import StoriesComponent from '../GeneralComponents/StoriesComp';
 import Footer from '../GeneralComponents/Footer';
+import { useEffect } from 'react';
 
 const StoriesPage = () => {
+    useEffect(() => {
+        
+    }, []);
+
     return ( 
         <div className="Stories">
             <NavBar logoUrl="Images\Spotify Logo Black.svg" color="black" activeLink="Stories" />

@@ -19,9 +19,9 @@ function App() {
   //     }
   //   });
   // });
-
+  
   return (
-    <div className="App w-screen overflow-hidden font-bold tracking-tight transition-all duration-300 ">
+    <div className="App w-screen scroll-smooth overflow-hidden font-bold tracking-tight transition-all duration-300 ">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage/>} />
