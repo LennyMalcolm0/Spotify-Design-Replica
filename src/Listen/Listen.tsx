@@ -28,20 +28,32 @@ const ListenPage = () => {
                     <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-16 md:gap-y-8 mt-[100px] md:mt-[50px]">
                         {listenStories.map((item, index) => (
                             <div key={index}>
-                                <StoriesComponent imageSrc={item.imageSrc} listenTheme={item.listenTheme} heading={item.heading} info={item.info} />
+                                <StoriesComponent 
+                                    imageSrc={item.imageSrc} 
+                                    listenTheme={item.listenTheme} 
+                                    heading={item.heading} 
+                                    info={item.info}
+                                />
                             </div>
                         ))}
                     </div>
                     
                     <ViewMore 
-                        actionText="View more stories" textColor1="white" textColor2="black" 
-                        arrowDirection="down" compClass="flex mt-[60px] sm:mt-[30px]"
+                        actionText="View more stories" 
+                        textColor1="white" 
+                        textColor2="black" 
+                        arrowDirection="down" 
+                        compClass="flex mt-[60px] sm:mt-[30px]"
                     />
                 </div>
                 
                 <Inbox />
 
-                <Footer logoSrc="Images\Spotify Logo White.svg" textColor="white" arrowHoverColor="black" />
+                <Footer 
+                    logoSrc="Images\Spotify Logo White.svg" 
+                    textColor="white" 
+                    arrowHoverColor="black" 
+                />
             </div>
         </div>
      );

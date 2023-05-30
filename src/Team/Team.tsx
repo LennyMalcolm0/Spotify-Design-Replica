@@ -38,8 +38,11 @@ const TeamsPage = () => {
 
                         <div className="flex justify-center">
                             <ViewMore 
-                                actionText="Join the band" textColor1="white" textColor2="black" 
-                                arrowDirection="down" compClass="flex mt-10"
+                                actionText="Join the band" 
+                                textColor1="white" 
+                                textColor2="black" 
+                                arrowDirection="down" 
+                                compClass="flex mt-10"
                             />
                         </div>
                     </div>
@@ -68,8 +71,11 @@ const TeamsPage = () => {
                         {disciplines.map((data, index) => (
                             <div key={index}>
                                 <Disciplines 
-                                    heading={data.heading} info={data.info} bgShapeSrc={data.bgShapeSrc} 
-                                    randomShapeSrc={data.randomShapeSrc} bgColorHover={data.bgColorHover} 
+                                    heading={data.heading} 
+                                    info={data.info} 
+                                    bgShapeSrc={data.bgShapeSrc} 
+                                    randomShapeSrc={data.randomShapeSrc} 
+                                    bgColorHover={data.bgColorHover} 
                                     bgColor1024={data.bgColor1024}
                                 />
                             </div>

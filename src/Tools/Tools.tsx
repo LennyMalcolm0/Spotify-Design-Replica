@@ -22,7 +22,12 @@ const ToolsPage = () => {
                     <div className="relative grid grid-cols-2 md:grid-cols-1 gap-x-6 gap-y-16 md:gap-y-8 mt-[100px] md:mt-[60px]">
                         {toolStories.map((item, index) => (
                             <div key={index}>
-                                <StoriesComponent imageSrc={item.imageSrc} theme={item.theme} heading={item.heading} info={item.info} />
+                                <StoriesComponent 
+                                    imageSrc={item.imageSrc} 
+                                    theme={item.theme} 
+                                    heading={item.heading} 
+                                    info={item.info} 
+                                />
                             </div>
                         ))}
 
@@ -64,7 +69,12 @@ const ToolsPage = () => {
 
                 <Inbox />
 
-                <Footer logoSrc="Images\Spotify Logo Black.svg" textColor="black" arrowHoverColor="white" bgImageSrc="background-shapes\tools-bottom-bg.svg" />
+                <Footer
+                    logoSrc="Images\Spotify Logo Black.svg" 
+                    textColor="black" 
+                    arrowHoverColor="white" 
+                    bgImageSrc="background-shapes\tools-bottom-bg.svg" 
+                />
             </div>
         </div>
      );

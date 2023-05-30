@@ -1,5 +1,4 @@
 import './Home.css';
-import { Link } from 'react-router-dom';
 import { stories, toolStories } from '../AppData/Data';
 import NavBar from '../GeneralComponents/NavBar';
 import ViewMore from '../GeneralComponents/ViewMore';
