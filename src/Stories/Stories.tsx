@@ -14,7 +14,7 @@ const StoriesPage = () => {
     }, []);
 
     return ( 
-        <div className="Stories">
+        <div className="Stories w-full overflow-x-hidden ">
             <NavBar logoUrl="Images\Spotify Logo Black.svg" color="black" activeLink="Stories" />
 
             <div className="absolute inset-0 h-fit w-full overflow-hidden">
