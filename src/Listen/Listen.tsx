@@ -23,16 +23,14 @@ const ListenPage = () => {
                     <div className="w-full text-center text-[32px] md:text-[28px] sm:text-[24px] text-white mt-[60px] sm:mt-[20px]">
                         Playlists, podcasts, and other audio goodness from our team.
                     </div>
-                    <div className="w-full overflow-hidden">
-                        <div className="w-full sm:mr-[30px] flex flex-wrap sm:flex-nowrap justify-center sm:justify-start gap-3 my-[20px] sm:overflow-x-auto">
-                            {musicGenre.map((genre, index) => (
-                                <div 
-                                    key={index} 
-                                    className="px-[4px] sm:px-[8px] sm:p-[4px] border-2 border-solid border-[#CCF566]
-                                    text-[#CCF566] text-[14px] whitespace-nowrap cursor-pointer"
-                                >{genre}</div>
-                            ))}
-                        </div>
+                    <div className="w-full sm:mr-[30px] flex flex-wrap sm:flex-nowrap justify-center sm:justify-start gap-3 my-[20px] sm:overflow-x-auto">
+                        {musicGenre.map((genre, index) => (
+                            <div 
+                                key={index} 
+                                className="px-[4px] sm:px-[8px] sm:p-[4px] border-2 border-solid border-[#CCF566]
+                                text-[#CCF566] text-[14px] whitespace-nowrap cursor-pointer"
+                            >{genre}</div>
+                        ))}
                     </div>
 
                     <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-16 md:gap-y-8 mt-[100px] md:mt-[50px]">
