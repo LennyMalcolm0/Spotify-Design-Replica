@@ -6,6 +6,7 @@ import Designers from './designersCarousel';
 import Inbox from '../GeneralComponents/Inbox';
 import StoriesComponent from '../GeneralComponents/StoriesComp';
 import Footer from '../GeneralComponents/Footer';
+import { useRef } from 'react';
 
 const HomePage = () => {
     const homeStories = [];
@@ -18,9 +19,19 @@ const HomePage = () => {
         homeToolStories.push(toolStories[i]);
     }
 
+    const postHeroRef = useRef<HTMLDivElement>(null);
+    const scrollToPostHero = () => {
+        if (!postHeroRef || !postHeroRef.current) return;
+        postHeroRef.current.scrollIntoView();
+    }
+
     return ( 
         <div className="Home">
-            <NavBar logoUrl="Images\Spotify Logo Black.svg" color="black" activeLink="Home" />
+            <NavBar 
+                logoUrl="Images\Spotify Logo Black.svg" 
+                color="black" 
+                activeLink="Home" 
+            />
 
             <div className="absolute inset-0 h-fit w-screen overflow-hidden">
                 <div className="Home-container pt-[100px] pb-[50px] bg-[#FFCC00] text-[14px] 2xl:flex flex-col items-center ">
@@ -48,7 +59,7 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div className="controls-position3 hidden xl:flex lg:hidden sm:flex ml-[-5px] mt-[60px] sm:mt-[200px] px-[60px] sm:px-[15px] ">
+                    <div className="controls-position3 hidden xl:flex lg:hidden sm:flex ml-[-5px] mt-[60px] sm:mt-[150px] px-[60px] sm:px-[15px] ">
                         <div><img src="icons\backward.svg" alt="" /></div>
                         <div className="mx-[20px]"><img src="icons\forward.svg" alt="" /></div>
                         <div><img src="icons\shuffle.svg" alt="" /></div>
@@ -66,15 +77,16 @@ const HomePage = () => {
 
                         <div className="scroll-down group flex items-center cursor-pointer text-[14px]">
                             <span>SCROLL DOWN</span>
-                            <div className="h-[60px] sm:h-[45px] w-[60px] sm:w-[45px] ml-[10px] border border-[#9c9797] border-opacity-40 
-                            rounded-full flex items-center justify-center group-hover:bg-black ">
+                            <div onClick={scrollToPostHero} className="h-[60px] sm:h-[45px] w-[60px] sm:w-[45px] ml-[10px] border border-[#9c9797] border-opacity-40 
+                                rounded-full flex items-center justify-center group-hover:bg-black "
+                            >
                                 <i className="fa-solid fa-arrow-down text-[18px] group-hover:text-white "></i>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="w-full max-w-[2000px] sm:mt-[30px] mb-[30px] mx-auto px-[60px] md:px-[30px] sm:px-[15px] ">
+                <div ref={postHeroRef} className="w-full max-w-[2000px] sm:mt-[30px] mb-[30px] mx-auto px-[60px] md:px-[30px] sm:px-[15px]">
                     <ViewMore 
                         h1Text="New Releases" link="/stories" linkClass="sm:hidden" actionText="View all stories" 
                         textColor1="black" textColor2="white" arrowDirection="right" compClass="flex mt-[50px]"
@@ -83,7 +95,13 @@ const HomePage = () => {
                     <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-16 md:gap-y-8 mt-[30px]">
                         {homeStories.map((item, index) => (
                             <div key={index}>
-                                <StoriesComponent imageSrc={item.imageSrc} theme={item.theme} listenTheme={item.listenTheme} heading={item.heading} info={item.info} />
+                                <StoriesComponent 
+                                    imageSrc={item.imageSrc} 
+                                    theme={item.theme} 
+                                    listenTheme={item.listenTheme} 
+                                    heading={item.heading} 
+                                    info={item.info} 
+                                />
                             </div>
                         ))}
                     </div>
@@ -94,8 +112,15 @@ const HomePage = () => {
                     />
                     
                     <ViewMore 
-                        h1Text="In the Spotlight" h2Text="Meet the humans who design Spotify" link="/stories" linkClass="sm:hidden" 
-                        actionText="View all in the spotlights" textColor1="black" textColor2="white" arrowDirection="right" compClass="flex my-[50px] sm:my-0 sm:mb-[30px]"
+                        h1Text="In the Spotlight" 
+                        h2Text="Meet the humans who design Spotify" 
+                        link="/stories" 
+                        linkClass="sm:hidden" 
+                        actionText="View all in the spotlights" 
+                        textColor1="black" 
+                        textColor2="white" 
+                        arrowDirection="right" 
+                        compClass="flex my-[50px] sm:my-0 sm:mb-[30px]"
                     />
 
                     <Designers />
@@ -122,7 +147,12 @@ const HomePage = () => {
 
                             {homeToolStories.map((item, index) => (
                                 <div key={index}>
-                                    <StoriesComponent imageSrc={item.imageSrc} theme={item.theme} heading={item.heading} info={item.info} />
+                                    <StoriesComponent 
+                                        imageSrc={item.imageSrc} 
+                                        theme={item.theme} 
+                                        heading={item.heading} 
+                                        info={item.info} 
+                                    />
                                 </div>
                             ))}
 
@@ -161,7 +191,12 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                <Footer logoSrc="Images\Spotify Logo Black.svg" textColor="black" arrowHoverColor="white" bgImageSrc="background-shapes\home-bottom-bg.svg" />
+                <Footer 
+                    logoSrc="Images\Spotify Logo Black.svg" 
+                    textColor="black" 
+                    arrowHoverColor="white" 
+                    bgImageSrc="background-shapes\home-bottom-bg.svg"
+                />
             </div>
         </div>
      );

@@ -1,3 +1,10 @@
+.open-category {
+    animation: openCategory 0.8s ease 0s 1 normal forwards;
+}
+.close-category {
+    animation: closeCategory 0.8s ease 0s 1 normal forwards;
+}
+
 @keyframes openCategory {
     from {
         top: -100%;
