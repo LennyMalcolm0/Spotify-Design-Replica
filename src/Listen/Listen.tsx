@@ -10,17 +10,27 @@ const ListenPage = () => {
 
     return ( 
         <div className="Listen">
-            <NavBar logoUrl="Images\Spotify Logo White.svg" color="white" activeLink="Listen" />
+            <NavBar 
+                logoUrl="Images\Spotify Logo White.svg" 
+                color="white" 
+                activeLink="Listen" 
+            />
 
             <div className="absolute inset-0 bg-black h-fit w-screen overflow-hidden">
                 <PickCategory textColor="white" bgColor="black" />
 
                 <div className="w-full max-w-[2000px] mx-auto px-[60px] md:px-[30px] sm:px-[15px]">
-                    <div className="w-full text-center text-[32px] md:text-[28px] sm:text-[24px] text-white mt-[60px] sm:mt-[20px]">Playlists, podcasts, and other audio goodness from our team.</div>
+                    <div className="w-full text-center text-[32px] md:text-[28px] sm:text-[24px] text-white mt-[60px] sm:mt-[20px]">
+                        Playlists, podcasts, and other audio goodness from our team.
+                    </div>
                     <div className="w-full overflow-hidden">
-                        <div className="w-fullsm:mr-[30px] flex flex-wrap sm:flex-nowrap justify-center sm:justify-start gap-3 my-[20px]">
+                        <div className="w-full sm:mr-[30px] flex flex-wrap sm:flex-nowrap justify-center sm:justify-start gap-3 my-[20px] sm:overflow-x-auto">
                             {musicGenre.map((genre, index) => (
-                                <div key={index} className="px-[4px] sm:px-[8px] sm:p-[4px] border-2 border-solid border-[#CCF566] text-[#CCF566] text-[14px] whitespace-nowrap cursor-pointer">{genre}</div>
+                                <div 
+                                    key={index} 
+                                    className="px-[4px] sm:px-[8px] sm:p-[4px] border-2 border-solid border-[#CCF566]
+                                    text-[#CCF566] text-[14px] whitespace-nowrap cursor-pointer"
+                                >{genre}</div>
                             ))}
                         </div>
                     </div>

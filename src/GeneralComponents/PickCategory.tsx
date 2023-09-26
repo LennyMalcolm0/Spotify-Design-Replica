@@ -45,7 +45,9 @@ const PickCategory = ({textColor, bgColor }: Props) => {
                     </div>
                 </div>
 
-                <div className="whitespace-nowrap text-[152px] md:text-[90px] sm:text-[60px] ml-[50%] translate-x-[-350px] select-none">
+                <div className="whitespace-nowrap text-[152px] md:text-[90px] sm:text-[60px] ml-[50%] 
+                    translate-x-[-350px] sm:ml-0 sm:translate-x-0 sm:p-[50px] sm:overflow-x-auto select-none"
+                >
                     <span className="cursor-pointer">All Stories</span>
                     <span className="cursor-pointer ml-[50px] opacity-20">Design</span>
                     <span className="cursor-pointer ml-[50px] opacity-20">Inspiration</span>
